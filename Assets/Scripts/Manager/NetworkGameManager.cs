@@ -11,6 +11,9 @@ public class NetworkGameManager : MonoBehaviour, INetworkRunnerCallbacks
     [SerializeField] private GameManager gameManagerPrefab;
     [SerializeField] private RoomPlayer roomPlayerPrefab;
 
+    [Header("Level Manager")]
+    [SerializeField] private LevelManager levelManager;
+
     public GameMode gameMode { get; private set; }
     private NetworkRunner networkRunner;
 
@@ -48,7 +51,7 @@ public class NetworkGameManager : MonoBehaviour, INetworkRunnerCallbacks
             {
                 GameMode = gameMode,
                 SessionName = ServerInfo.LobbyName,
-                SceneObjectProvider = gameObject.AddComponent<NetworkSceneManagerDefault>(),
+                SceneObjectProvider = levelManager,
                 PlayerCount = ServerInfo.MaxUsers,
                 DisableClientSessionCreation = true
             });
@@ -59,7 +62,7 @@ public class NetworkGameManager : MonoBehaviour, INetworkRunnerCallbacks
             {
                 GameMode = gameMode,
                 SessionName = ServerInfo.LobbyName,
-                SceneObjectProvider = gameObject.AddComponent<NetworkSceneManagerDefault>(),
+                SceneObjectProvider = levelManager,
                 DisableClientSessionCreation = true
             });
         }

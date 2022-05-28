@@ -11,9 +11,6 @@ GameObject:
   - component: {fileID: 4971529614715369184}
   - component: {fileID: 4971529614715369198}
   - component: {fileID: 4971529614715369199}
-  - component: {fileID: 5522099606840713365}
-  - component: {fileID: 9078964312637309278}
-  - component: {fileID: 3871413170772528493}
   m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
@@ -86,73 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5522099606840713365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4971529614715369185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9452713802091754c8e3466bff3be864, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interpolationDataSource: 0
---- !u!114 &9078964312637309278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4971529614715369185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23a1f1aad5c84ee43ad95e202fa19e18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interpolationDataSource: 0
-  walkSpeed: 1
---- !u!114 &3871413170772528493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4971529614715369185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46a0407cc97bf1b4fa06cf67e595d9c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interpolationDataSource: 0
-  Move:
-    m_Name: Move
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: f480e709-d445-49f3-84a7-8cc153b9aa70
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  Look:
-    m_Name: Look
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 95082ba0-5460-4bd6-a138-885771bf5c3b
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  Fire:
-    m_Name: Fire
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 90f2c3c7-7b63-45b2-b191-fbb42c509b15
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
 --- !u!1 &4971529615853325621
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +98,9 @@ GameObject:
   - component: {fileID: 4971529615853325619}
   - component: {fileID: 1904939676209817524}
   - component: {fileID: 4971529615853325631}
+  - component: {fileID: 4949682062872696677}
+  - component: {fileID: 981167898456995109}
+  - component: {fileID: 628716126418467346}
   m_Layer: 0
   m_Name: FPSPlayerPrefab
   m_TagString: Untagged
@@ -282,9 +215,9 @@ MonoBehaviour:
   - {fileID: 4971529615853325618}
   - {fileID: 4971529615853325616}
   - {fileID: 1904939676209817524}
-  - {fileID: 5522099606840713365}
-  - {fileID: 9078964312637309278}
-  - {fileID: 3871413170772528493}
+  - {fileID: 4949682062872696677}
+  - {fileID: 981167898456995109}
+  - {fileID: 628716126418467346}
   SimulationBehaviours: []
 --- !u!114 &1904939676209817524
 MonoBehaviour:
@@ -330,3 +263,70 @@ MonoBehaviour:
   m_DefaultActionMap: FPSPlayer
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &4949682062872696677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4971529615853325621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9452713802091754c8e3466bff3be864, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+--- !u!114 &981167898456995109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4971529615853325621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23a1f1aad5c84ee43ad95e202fa19e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  walkSpeed: 1
+--- !u!114 &628716126418467346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4971529615853325621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46a0407cc97bf1b4fa06cf67e595d9c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  Move:
+    m_Name: Move
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f480e709-d445-49f3-84a7-8cc153b9aa70
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  Look:
+    m_Name: Look
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 95082ba0-5460-4bd6-a138-885771bf5c3b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  Fire:
+    m_Name: Fire
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 90f2c3c7-7b63-45b2-b191-fbb42c509b15
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0

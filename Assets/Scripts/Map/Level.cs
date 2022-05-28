@@ -28,7 +28,7 @@ public class Level : NetworkBehaviour
     public void SpawnPlayers(NetworkRunner runner, RoomPlayer player)
     {
         var index = RoomPlayer.playerList.IndexOf(player);
-        var spawnPoint = spawnPoints[index];
+        var spawnPoint = spawnPoints[0];
 
         // Modify this if player is customizable
         // var prefabId = player.PrefabId;
@@ -41,7 +41,14 @@ public class Level : NetworkBehaviour
                 player.Object.InputAuthority
             );
 
-        Debug.Log($"Spawning entity {entity.name} for {player.displayName}");
-        entity.transform.name = player.displayName;
+        if(entity != null)
+        {
+            Debug.Log($"Spawning entity {entity.name} for {player.displayName}");
+            entity.transform.name = player.displayName;
+        }
+        else
+        {
+            Debug.LogWarning("Entity not fully spawned");
+        }
     }
 }

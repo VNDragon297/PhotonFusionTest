@@ -13,6 +13,11 @@ public class LevelManager : NetworkSceneManagerBase
 
     public static LevelManager instance => Singleton<LevelManager>.Instance;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
+
     public static void LoadMenu()
     {
         instance.Runner.SetActiveScene((int)SceneIndex.MAINMENU);
@@ -52,6 +57,10 @@ public class LevelManager : NetworkSceneManagerBase
                 foreach(var player in RoomPlayer.playerList)
                 {
                     Debug.Log($"Attempting to spawn {player.displayName}");
+                    if(Level.current != null)
+                    {
+                        Level.current.SpawnPlayers(Runner, player);
+                    }
                 }
             }
         }
