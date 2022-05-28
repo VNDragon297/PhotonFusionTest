@@ -162,6 +162,8 @@ public class NetworkGameManager : MonoBehaviour, INetworkRunnerCallbacks
     {
         // If it is a game scene, broadcast event for new scene initialize
         Debug.Log($"Scene {runner.CurrentScene} loaded in successfully");
+
+        EventManager.instance.SceneLoaded();
     }
 
     public void OnInput(NetworkRunner runner, NetworkInput input) { }

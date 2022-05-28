@@ -16,6 +16,8 @@ public class LevelManager : NetworkSceneManagerBase
     private void Awake()
     {
         DontDestroyOnLoad(this);
+
+        EventManager.instance.onSceneLoaded += PostLoadScene;
     }
 
     public static void LoadMenu()
@@ -36,7 +38,7 @@ public class LevelManager : NetworkSceneManagerBase
 
         List<NetworkObject> sceneObjects = new List<NetworkObject>();
 
-        if(newScene >= (int)SceneIndex.MAINMENU)
+        if (newScene >= (int)SceneIndex.MAINMENU)
         {
             yield return SceneManager.LoadSceneAsync(newScene, LoadSceneMode.Single);
             Scene loadedScene = SceneManager.GetSceneByBuildIndex(newScene);
@@ -46,10 +48,12 @@ public class LevelManager : NetworkSceneManagerBase
 
         finished(sceneObjects);
 
-        //Delay one frame, to make sure level objects spawned locally
+        // Delay one frame, to make sure level objects spawned locally
         yield return null;
 
+        #region OLD
         // Spawn players
+        /*
         if(newScene != null && newScene > (int)SceneIndex.MAINMENU)
         {
             if(Runner.GameMode == GameMode.Host || Runner.GameMode == GameMode.Server)
@@ -58,6 +62,26 @@ public class LevelManager : NetworkSceneManagerBase
                 {
                     Debug.Log($"Attempting to spawn {player.displayName}");
                     if(Level.current != null)
+                    {
+                        Level.current.SpawnPlayers(Runner, player);
+                    }
+                }
+            }
+        }
+        */
+        #endregion
+    }
+
+    private void PostLoadScene()
+    {
+        if(SceneManager.GetActiveScene().buildIndex > (int)SceneIndex.MAINMENU)
+        {
+            if (Runner.GameMode == GameMode.Host || Runner.GameMode == GameMode.Server)
+            {
+                foreach (var player in RoomPlayer.playerList)
+                {
+                    Debug.Log($"Attempting to spawn {player.displayName}");
+                    if (Level.current != null)
                     {
                         Level.current.SpawnPlayers(Runner, player);
                     }
@@ -77,5 +101,10 @@ public class LevelManager : NetworkSceneManagerBase
         {
             UIScreen.activeScreen.BackTo(lobbyScreen);
         }
+    }
+
+    private void OnDestroy()
+    {
+        EventManager.instance.onSceneLoaded -= PostLoadScene;
     }
 }

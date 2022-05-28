@@ -14,7 +14,9 @@ public class FPSInput : FPSComponent, INetworkRunnerCallbacks
         public const byte MOUSEBUTTON1 = 0x02;      // RMB
 
         public byte buttons;
-        public Vector3 direction;
+        public Vector2 moveDirection;
+        public Vector2 lookDelta;
+        public bool fired;
     }
 
     public Gamepad gamepad;
@@ -26,7 +28,6 @@ public class FPSInput : FPSComponent, INetworkRunnerCallbacks
     public override void Spawned()
     {
         base.Spawned();
-
         Runner.AddCallbacks(this);
 
         // Clone create an identical input map with a new unique identifier
@@ -34,6 +35,10 @@ public class FPSInput : FPSComponent, INetworkRunnerCallbacks
         Move = Move.Clone();
         Look = Look.Clone();
         Fire = Fire.Clone();
+
+        Move.Enable();
+        Look.Enable();
+        Fire.Enable();
 
         Fire.performed += FirePressed;
     }
@@ -57,20 +62,26 @@ public class FPSInput : FPSComponent, INetworkRunnerCallbacks
         DisposeInput();
     }
 
-#region Network Callbacks
+    #region Network Callbacks
+    #region Inputs
+    private static Vector2 ReadVector2(InputAction action) => action.ReadValue<Vector2>();
+    private static bool ReadBoolean(InputAction action) => action.ReadValue<bool>();
+
     public void OnInput(NetworkRunner runner, NetworkInput input)
     {
+        // Initiallize game controller and inputs
         gamepad = Gamepad.current;
-
         var userInput = new NetworkInputData();
 
-        if(GetInput(out userInput))
-        {
-            userInput.direction.Normalize();
+        // Read inputs
+        userInput.moveDirection = ReadVector2(Move);
+        userInput.lookDelta = ReadVector2(Look);
+        userInput.fired = ReadBoolean(Fire);
 
-            input.Set(userInput);
-        }
+        // Send user's input to server
+        input.Set(userInput);
     }
+    #endregion
 
     #region Unused
     public void OnConnectedToServer(NetworkRunner runner)

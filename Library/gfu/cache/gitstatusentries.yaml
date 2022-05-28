@@ -13,42 +13,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2022-05-27T21:57:06.889-07:00
-  initializedAtString: 2022-05-27T20:50:53.424-07:00
+  lastUpdatedAtString: 2022-05-28T00:02:15.783-07:00
+  initializedAtString: 2022-05-27T22:23:52.480-07:00
   entries:
-  - path: Assembly-CSharp.csproj
-    fullPath: D:\Projects\PhotonFusionTest\Assembly-CSharp.csproj
-    projectPath: Assembly-CSharp.csproj
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Assembly-CSharp-Editor.csproj
-    fullPath: D:\Projects\PhotonFusionTest\Assembly-CSharp-Editor.csproj
-    projectPath: Assembly-CSharp-Editor.csproj
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Assembly-CSharp-Editor-firstpass.csproj
-    fullPath: D:\Projects\PhotonFusionTest\Assembly-CSharp-Editor-firstpass.csproj
-    projectPath: Assembly-CSharp-Editor-firstpass.csproj
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Assets\Photon\Fusion\Resources\NetworkProjectConfig.fusion
-    fullPath: D:\Projects\PhotonFusionTest\Assets\Photon\Fusion\Resources\NetworkProjectConfig.fusion
-    projectPath: Assets\Photon\Fusion\Resources\NetworkProjectConfig.fusion
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Assets\Prefabs\FPSPlayerPrefab.prefab
     fullPath: D:\Projects\PhotonFusionTest\Assets\Prefabs\FPSPlayerPrefab.prefab
     projectPath: Assets\Prefabs\FPSPlayerPrefab.prefab
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Assets\Scenes\FPSScene.unity
-    fullPath: D:\Projects\PhotonFusionTest\Assets\Scenes\FPSScene.unity
-    projectPath: Assets\Scenes\FPSScene.unity
+  - path: Assets\Scripts\FPS\FPSController.cs
+    fullPath: D:\Projects\PhotonFusionTest\Assets\Scripts\FPS\FPSController.cs
+    projectPath: Assets\Scripts\FPS\FPSController.cs
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Assets\Scripts\FPS\FPSInput.cs
+    fullPath: D:\Projects\PhotonFusionTest\Assets\Scripts\FPS\FPSInput.cs
+    projectPath: Assets\Scripts\FPS\FPSInput.cs
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Assets\Scripts\Manager\EventManager.cs
+    fullPath: D:\Projects\PhotonFusionTest\Assets\Scripts\Manager\EventManager.cs
+    projectPath: Assets\Scripts\Manager\EventManager.cs
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -64,351 +52,111 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Assets\Scripts\Map\Level.cs
-    fullPath: D:\Projects\PhotonFusionTest\Assets\Scripts\Map\Level.cs
-    projectPath: Assets\Scripts\Map\Level.cs
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Fusion.Addressables.csproj
-    fullPath: D:\Projects\PhotonFusionTest\Fusion.Addressables.csproj
-    projectPath: Fusion.Addressables.csproj
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Library\AnnotationManager
-    fullPath: D:\Projects\PhotonFusionTest\Library\AnnotationManager
-    projectPath: Library\AnnotationManager
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\APIUpdater\project-dependencies.graph
-    fullPath: D:\Projects\PhotonFusionTest\Library\APIUpdater\project-dependencies.graph
-    projectPath: Library\APIUpdater\project-dependencies.graph
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: Library\ArtifactDB
     fullPath: D:\Projects\PhotonFusionTest\Library\ArtifactDB
     projectPath: Library\ArtifactDB
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\ArtifactDB-lock
-    fullPath: D:\Projects\PhotonFusionTest\Library\ArtifactDB-lock
-    projectPath: Library\ArtifactDB-lock
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Library\Bee\1900b0aE.dag
     fullPath: D:\Projects\PhotonFusionTest\Library\Bee\1900b0aE.dag
     projectPath: Library\Bee\1900b0aE.dag
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\Bee\1900b0aE.dag.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\Bee\1900b0aE.dag.json
-    projectPath: Library\Bee\1900b0aE.dag.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\Bee\1900b0aE.dag.outputdata
-    fullPath: D:\Projects\PhotonFusionTest\Library\Bee\1900b0aE.dag.outputdata
-    projectPath: Library\Bee\1900b0aE.dag.outputdata
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\Bee\1900b0aE.dag_derived
-    fullPath: D:\Projects\PhotonFusionTest\Library\Bee\1900b0aE.dag_derived
-    projectPath: Library\Bee\1900b0aE.dag_derived
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\Bee\1900b0aE.dag_fsmtime
-    fullPath: D:\Projects\PhotonFusionTest\Library\Bee\1900b0aE.dag_fsmtime
-    projectPath: Library\Bee\1900b0aE.dag_fsmtime
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\Bee\1900b0aE-inputdata.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\Bee\1900b0aE-inputdata.json
-    projectPath: Library\Bee\1900b0aE-inputdata.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Library\Bee\1900b0aP.dag
     fullPath: D:\Projects\PhotonFusionTest\Library\Bee\1900b0aP.dag
     projectPath: Library\Bee\1900b0aP.dag
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Library\Bee\1900b0aP.dag_fsmtime
     fullPath: D:\Projects\PhotonFusionTest\Library\Bee\1900b0aP.dag_fsmtime
     projectPath: Library\Bee\1900b0aP.dag_fsmtime
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Library\Bee\1900b0aP-inputdata.json
     fullPath: D:\Projects\PhotonFusionTest\Library\Bee\1900b0aP-inputdata.json
     projectPath: Library\Bee\1900b0aP-inputdata.json
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library\Bee\backend_profiler0.traceevents
+    fullPath: D:\Projects\PhotonFusionTest\Library\Bee\backend_profiler0.traceevents
+    projectPath: Library\Bee\backend_profiler0.traceevents
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Library\Bee\backend_profiler1.traceevents
     fullPath: D:\Projects\PhotonFusionTest\Library\Bee\backend_profiler1.traceevents
     projectPath: Library\Bee\backend_profiler1.traceevents
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\Bee\bee_backend.info
-    fullPath: D:\Projects\PhotonFusionTest\Library\Bee\bee_backend.info
-    projectPath: Library\Bee\bee_backend.info
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Library\Bee\buildprogram0.traceevents
     fullPath: D:\Projects\PhotonFusionTest\Library\Bee\buildprogram0.traceevents
     projectPath: Library\Bee\buildprogram0.traceevents
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Library\Bee\buildreport.json
     fullPath: D:\Projects\PhotonFusionTest\Library\Bee\buildreport.json
     projectPath: Library\Bee\buildreport.json
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Library\Bee\buildreport.json_0.traceevents
     fullPath: D:\Projects\PhotonFusionTest\Library\Bee\buildreport.json_0.traceevents
     projectPath: Library\Bee\buildreport.json_0.traceevents
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Library\Bee\buildreport.json_1.traceevents
     fullPath: D:\Projects\PhotonFusionTest\Library\Bee\buildreport.json_1.traceevents
     projectPath: Library\Bee\buildreport.json_1.traceevents
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Library\Bee\fullprofile.json
     fullPath: D:\Projects\PhotonFusionTest\Library\Bee\fullprofile.json
     projectPath: Library\Bee\fullprofile.json
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Library\Bee\Playerc9a4b85b.dag
     fullPath: D:\Projects\PhotonFusionTest\Library\Bee\Playerc9a4b85b.dag
     projectPath: Library\Bee\Playerc9a4b85b.dag
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Library\Bee\Playerc9a4b85b.dag_fsmtime
     fullPath: D:\Projects\PhotonFusionTest\Library\Bee\Playerc9a4b85b.dag_fsmtime
     projectPath: Library\Bee\Playerc9a4b85b.dag_fsmtime
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Library\Bee\tundra.digestcache
     fullPath: D:\Projects\PhotonFusionTest\Library\Bee\tundra.digestcache
     projectPath: Library\Bee\tundra.digestcache
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Library\Bee\tundra.log.json
     fullPath: D:\Projects\PhotonFusionTest\Library\Bee\tundra.log.json
     projectPath: Library\Bee\tundra.log.json
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\Bee\TundraBuildState.state
+    fullPath: D:\Projects\PhotonFusionTest\Library\Bee\TundraBuildState.state
+    projectPath: Library\Bee\TundraBuildState.state
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Library\Bee\TundraBuildState.state.map
     fullPath: D:\Projects\PhotonFusionTest\Library\Bee\TundraBuildState.state.map
     projectPath: Library\Bee\TundraBuildState.state.map
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BuildPlayer.prefs
-    fullPath: D:\Projects\PhotonFusionTest\Library\BuildPlayer.prefs
-    projectPath: Library\BuildPlayer.prefs
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BuildPlayerData\Editor\TypeDb-All.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\BuildPlayerData\Editor\TypeDb-All.json
-    projectPath: Library\BuildPlayerData\Editor\TypeDb-All.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BuildPlayerData\Player\RuntimeInitializeOnLoads.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\BuildPlayerData\Player\RuntimeInitializeOnLoads.json
-    projectPath: Library\BuildPlayerData\Player\RuntimeInitializeOnLoads.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BuildPlayerData\Player\TypeDb-All.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\BuildPlayerData\Player\TypeDb-All.json
-    projectPath: Library\BuildPlayerData\Player\TypeDb-All.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BuildSettings.asset
-    fullPath: D:\Projects\PhotonFusionTest\Library\BuildSettings.asset
-    projectPath: Library\BuildSettings.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\1d56857a35bb9afa11311a1d25fe8fb5.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\1d56857a35bb9afa11311a1d25fe8fb5.dll
-    projectPath: Library\BurstCache\JIT\1d56857a35bb9afa11311a1d25fe8fb5.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\1d56857a35bb9afa11311a1d25fe8fb5.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\1d56857a35bb9afa11311a1d25fe8fb5.json
-    projectPath: Library\BurstCache\JIT\1d56857a35bb9afa11311a1d25fe8fb5.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\2ba9ccad8c56f9d8cbcfa31d352cdf30.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\2ba9ccad8c56f9d8cbcfa31d352cdf30.dll
-    projectPath: Library\BurstCache\JIT\2ba9ccad8c56f9d8cbcfa31d352cdf30.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\2ba9ccad8c56f9d8cbcfa31d352cdf30.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\2ba9ccad8c56f9d8cbcfa31d352cdf30.json
-    projectPath: Library\BurstCache\JIT\2ba9ccad8c56f9d8cbcfa31d352cdf30.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\36d07076b2ac87ddda2b43acfddd6b06.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\36d07076b2ac87ddda2b43acfddd6b06.dll
-    projectPath: Library\BurstCache\JIT\36d07076b2ac87ddda2b43acfddd6b06.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\36d07076b2ac87ddda2b43acfddd6b06.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\36d07076b2ac87ddda2b43acfddd6b06.json
-    projectPath: Library\BurstCache\JIT\36d07076b2ac87ddda2b43acfddd6b06.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\5ad07f5b277ee7708d505f8fc48ba97d.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\5ad07f5b277ee7708d505f8fc48ba97d.dll
-    projectPath: Library\BurstCache\JIT\5ad07f5b277ee7708d505f8fc48ba97d.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\5ad07f5b277ee7708d505f8fc48ba97d.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\5ad07f5b277ee7708d505f8fc48ba97d.json
-    projectPath: Library\BurstCache\JIT\5ad07f5b277ee7708d505f8fc48ba97d.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\6010a5ad956c2ad3c76d97bff1c7ae16.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\6010a5ad956c2ad3c76d97bff1c7ae16.dll
-    projectPath: Library\BurstCache\JIT\6010a5ad956c2ad3c76d97bff1c7ae16.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\6010a5ad956c2ad3c76d97bff1c7ae16.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\6010a5ad956c2ad3c76d97bff1c7ae16.json
-    projectPath: Library\BurstCache\JIT\6010a5ad956c2ad3c76d97bff1c7ae16.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\650f81b990c9e9c805f1867b9c2d59f7.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\650f81b990c9e9c805f1867b9c2d59f7.dll
-    projectPath: Library\BurstCache\JIT\650f81b990c9e9c805f1867b9c2d59f7.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\650f81b990c9e9c805f1867b9c2d59f7.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\650f81b990c9e9c805f1867b9c2d59f7.json
-    projectPath: Library\BurstCache\JIT\650f81b990c9e9c805f1867b9c2d59f7.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\7e47b6b44f854b958b2dc6055f8bd536.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\7e47b6b44f854b958b2dc6055f8bd536.dll
-    projectPath: Library\BurstCache\JIT\7e47b6b44f854b958b2dc6055f8bd536.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\7e47b6b44f854b958b2dc6055f8bd536.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\7e47b6b44f854b958b2dc6055f8bd536.json
-    projectPath: Library\BurstCache\JIT\7e47b6b44f854b958b2dc6055f8bd536.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\963c4001bea35a4c823b0f9ace435980.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\963c4001bea35a4c823b0f9ace435980.dll
-    projectPath: Library\BurstCache\JIT\963c4001bea35a4c823b0f9ace435980.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\963c4001bea35a4c823b0f9ace435980.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\963c4001bea35a4c823b0f9ace435980.json
-    projectPath: Library\BurstCache\JIT\963c4001bea35a4c823b0f9ace435980.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\a9fed1421837fb71f65abb8b51c5a309.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\a9fed1421837fb71f65abb8b51c5a309.dll
-    projectPath: Library\BurstCache\JIT\a9fed1421837fb71f65abb8b51c5a309.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\a9fed1421837fb71f65abb8b51c5a309.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\a9fed1421837fb71f65abb8b51c5a309.json
-    projectPath: Library\BurstCache\JIT\a9fed1421837fb71f65abb8b51c5a309.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\ac78ba140590ccb0934776ca59a83e17.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\ac78ba140590ccb0934776ca59a83e17.dll
-    projectPath: Library\BurstCache\JIT\ac78ba140590ccb0934776ca59a83e17.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\ac78ba140590ccb0934776ca59a83e17.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\ac78ba140590ccb0934776ca59a83e17.json
-    projectPath: Library\BurstCache\JIT\ac78ba140590ccb0934776ca59a83e17.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\f088a829ca5e2c536e3531cd94cb8388.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\f088a829ca5e2c536e3531cd94cb8388.dll
-    projectPath: Library\BurstCache\JIT\f088a829ca5e2c536e3531cd94cb8388.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\f088a829ca5e2c536e3531cd94cb8388.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\f088a829ca5e2c536e3531cd94cb8388.json
-    projectPath: Library\BurstCache\JIT\f088a829ca5e2c536e3531cd94cb8388.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\fd0d26ac46a4252d1cf750ba481bc14d.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\fd0d26ac46a4252d1cf750ba481bc14d.dll
-    projectPath: Library\BurstCache\JIT\fd0d26ac46a4252d1cf750ba481bc14d.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\fd0d26ac46a4252d1cf750ba481bc14d.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\fd0d26ac46a4252d1cf750ba481bc14d.json
-    projectPath: Library\BurstCache\JIT\fd0d26ac46a4252d1cf750ba481bc14d.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\Hashes\mscorlib.bhc
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\Hashes\mscorlib.bhc
-    projectPath: Library\BurstCache\JIT\Hashes\mscorlib.bhc
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\Hashes\netstandard.bhc
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\Hashes\netstandard.bhc
-    projectPath: Library\BurstCache\JIT\Hashes\netstandard.bhc
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -416,56 +164,26 @@ MonoBehaviour:
     fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\Hashes\Unity.Burst.bhc
     projectPath: Library\BurstCache\JIT\Hashes\Unity.Burst.bhc
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Library\BurstCache\JIT\Hashes\Unity.Mathematics.bhc
     fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\Hashes\Unity.Mathematics.bhc
     projectPath: Library\BurstCache\JIT\Hashes\Unity.Mathematics.bhc
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Library\BurstCache\JIT\Hashes\Unity.RenderPipelines.Universal.Runtime.bhc
     fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\Hashes\Unity.RenderPipelines.Universal.Runtime.bhc
     projectPath: Library\BurstCache\JIT\Hashes\Unity.RenderPipelines.Universal.Runtime.bhc
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\BurstCache\JIT\Hashes\UnityEngine.CoreModule.bhc
-    fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\Hashes\UnityEngine.CoreModule.bhc
-    projectPath: Library\BurstCache\JIT\Hashes\UnityEngine.CoreModule.bhc
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Library\EditorInstance.json
     fullPath: D:\Projects\PhotonFusionTest\Library\EditorInstance.json
     projectPath: Library\EditorInstance.json
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\EditorOnlyScriptingSettings.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\EditorOnlyScriptingSettings.json
-    projectPath: Library\EditorOnlyScriptingSettings.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\EditorOnlyVirtualTextureState.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\EditorOnlyVirtualTextureState.json
-    projectPath: Library\EditorOnlyVirtualTextureState.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\EditorSnapSettings.asset
-    fullPath: D:\Projects\PhotonFusionTest\Library\EditorSnapSettings.asset
-    projectPath: Library\EditorSnapSettings.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\EditorUserBuildSettings.asset
-    fullPath: D:\Projects\PhotonFusionTest\Library\EditorUserBuildSettings.asset
-    projectPath: Library\EditorUserBuildSettings.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Library\gfu\cache\branches.yaml
     fullPath: D:\Projects\PhotonFusionTest\Library\gfu\cache\branches.yaml
     projectPath: Library\gfu\cache\branches.yaml
@@ -506,137 +224,23 @@ MonoBehaviour:
     fullPath: D:\Projects\PhotonFusionTest\Library\InspectorExpandedItems.asset
     projectPath: Library\InspectorExpandedItems.asset
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Library\LastBuild.buildreport
     fullPath: D:\Projects\PhotonFusionTest\Library\LastBuild.buildreport
     projectPath: Library\LastBuild.buildreport
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\MonoManager.asset
-    fullPath: D:\Projects\PhotonFusionTest\Library\MonoManager.asset
-    projectPath: Library\MonoManager.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\207A89C76C3730EA
-    fullPath: D:\Projects\PhotonFusionTest\Library\PackageCache\com.unity.burst@1.6.5\.Runtime\207A89C76C3730EA
-    projectPath: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\207A89C76C3730EA
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\43FFF67504C1B77C
-    fullPath: D:\Projects\PhotonFusionTest\Library\PackageCache\com.unity.burst@1.6.5\.Runtime\43FFF67504C1B77C
-    projectPath: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\43FFF67504C1B77C
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\66B6680AF8A7451D
-    fullPath: D:\Projects\PhotonFusionTest\Library\PackageCache\com.unity.burst@1.6.5\.Runtime\66B6680AF8A7451D
-    projectPath: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\66B6680AF8A7451D
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\B4B9E3881B00232E
-    fullPath: D:\Projects\PhotonFusionTest\Library\PackageCache\com.unity.burst@1.6.5\.Runtime\B4B9E3881B00232E
-    projectPath: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\B4B9E3881B00232E
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\bcl.exe
-    fullPath: D:\Projects\PhotonFusionTest\Library\PackageCache\com.unity.burst@1.6.5\.Runtime\bcl.exe
-    projectPath: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\bcl.exe
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\bcl.exe.config
-    fullPath: D:\Projects\PhotonFusionTest\Library\PackageCache\com.unity.burst@1.6.5\.Runtime\bcl.exe.config
-    projectPath: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\bcl.exe.config
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\Burst.Backend.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\PackageCache\com.unity.burst@1.6.5\.Runtime\Burst.Backend.dll
-    projectPath: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\Burst.Backend.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\Burst.Compiler.IL.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\PackageCache\com.unity.burst@1.6.5\.Runtime\Burst.Compiler.IL.dll
-    projectPath: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\Burst.Compiler.IL.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\burst-llvm-10.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\PackageCache\com.unity.burst@1.6.5\.Runtime\burst-llvm-10.dll
-    projectPath: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\burst-llvm-10.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\burst-llvm-11.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\PackageCache\com.unity.burst@1.6.5\.Runtime\burst-llvm-11.dll
-    projectPath: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\burst-llvm-11.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\burst-llvm-43FFF67504C1B77C_11.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\PackageCache\com.unity.burst@1.6.5\.Runtime\burst-llvm-43FFF67504C1B77C_11.dll
-    projectPath: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\burst-llvm-43FFF67504C1B77C_11.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\burst-llvm-43FFF67504C1B77C_12.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\PackageCache\com.unity.burst@1.6.5\.Runtime\burst-llvm-43FFF67504C1B77C_12.dll
-    projectPath: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\burst-llvm-43FFF67504C1B77C_12.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\burst-llvm-B4B9E3881B00232E_11.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\PackageCache\com.unity.burst@1.6.5\.Runtime\burst-llvm-B4B9E3881B00232E_11.dll
-    projectPath: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\burst-llvm-B4B9E3881B00232E_11.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\burst-llvm-B4B9E3881B00232E_12.dll
-    fullPath: D:\Projects\PhotonFusionTest\Library\PackageCache\com.unity.burst@1.6.5\.Runtime\burst-llvm-B4B9E3881B00232E_12.dll
-    projectPath: Library\PackageCache\com.unity.burst@1.6.5\.Runtime\burst-llvm-B4B9E3881B00232E_12.dll
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Library\PlayerDataCache\Win64\Data\globalgamemanagers
     fullPath: D:\Projects\PhotonFusionTest\Library\PlayerDataCache\Win64\Data\globalgamemanagers
     projectPath: Library\PlayerDataCache\Win64\Data\globalgamemanagers
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library\PlayerDataCache\Win64\Data\globalgamemanagers.assets
-    fullPath: D:\Projects\PhotonFusionTest\Library\PlayerDataCache\Win64\Data\globalgamemanagers.assets
-    projectPath: Library\PlayerDataCache\Win64\Data\globalgamemanagers.assets
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Library\PlayerDataCache\Win64\Data\level0
-    fullPath: D:\Projects\PhotonFusionTest\Library\PlayerDataCache\Win64\Data\level0
-    projectPath: Library\PlayerDataCache\Win64\Data\level0
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Library\PlayerDataCache\Win64\Data\level1
-    fullPath: D:\Projects\PhotonFusionTest\Library\PlayerDataCache\Win64\Data\level1
-    projectPath: Library\PlayerDataCache\Win64\Data\level1
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Library\PlayerDataCache\Win64\Data\resources.assets
     fullPath: D:\Projects\PhotonFusionTest\Library\PlayerDataCache\Win64\Data\resources.assets
     projectPath: Library\PlayerDataCache\Win64\Data\resources.assets
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Library\PlayerDataCache\Win64\Data\ScriptingAssemblies.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\PlayerDataCache\Win64\Data\ScriptingAssemblies.json
-    projectPath: Library\PlayerDataCache\Win64\Data\ScriptingAssemblies.json
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -682,15 +286,15 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library\SourceAssetDB
-    fullPath: D:\Projects\PhotonFusionTest\Library\SourceAssetDB
-    projectPath: Library\SourceAssetDB
+  - path: Library\ShaderCache\EditorEncounteredVariants
+    fullPath: D:\Projects\PhotonFusionTest\Library\ShaderCache\EditorEncounteredVariants
+    projectPath: Library\ShaderCache\EditorEncounteredVariants
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library\SourceAssetDB-lock
-    fullPath: D:\Projects\PhotonFusionTest\Library\SourceAssetDB-lock
-    projectPath: Library\SourceAssetDB-lock
+  - path: Library\SourceAssetDB
+    fullPath: D:\Projects\PhotonFusionTest\Library\SourceAssetDB
+    projectPath: Library\SourceAssetDB
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -700,9 +304,15 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library\StateCache\PrefabStageHierarchy\d8\d8cf44dda6ab2d5eecffe6028cecacdf.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\StateCache\PrefabStageHierarchy\d8\d8cf44dda6ab2d5eecffe6028cecacdf.json
-    projectPath: Library\StateCache\PrefabStageHierarchy\d8\d8cf44dda6ab2d5eecffe6028cecacdf.json
+  - path: Library\StateCache\PrefabStageHierarchy\19\19b194688fc7ec5076b414b63739d994.json
+    fullPath: D:\Projects\PhotonFusionTest\Library\StateCache\PrefabStageHierarchy\19\19b194688fc7ec5076b414b63739d994.json
+    projectPath: Library\StateCache\PrefabStageHierarchy\19\19b194688fc7ec5076b414b63739d994.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\StateCache\SceneView\21\2104b45dc4b32697cb41d1e347f9db61.json
+    fullPath: D:\Projects\PhotonFusionTest\Library\StateCache\SceneView\21\2104b45dc4b32697cb41d1e347f9db61.json
+    projectPath: Library\StateCache\SceneView\21\2104b45dc4b32697cb41d1e347f9db61.json
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -712,15 +322,15 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library\StateCache\SceneView\a2\a2b6a212d2fcb6cdf606bb9ae7ce4712.json
-    fullPath: D:\Projects\PhotonFusionTest\Library\StateCache\SceneView\a2\a2b6a212d2fcb6cdf606bb9ae7ce4712.json
-    projectPath: Library\StateCache\SceneView\a2\a2b6a212d2fcb6cdf606bb9ae7ce4712.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: PhotonFusionTest
     fullPath: D:\Projects\PhotonFusionTest\PhotonFusionTest
     projectPath: PhotonFusionTest
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
+  - path: UserSettings\EditorUserSettings.asset
+    fullPath: D:\Projects\PhotonFusionTest\UserSettings\EditorUserSettings.asset
+    projectPath: UserSettings\EditorUserSettings.asset
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3

@@ -12,6 +12,9 @@ public class FPSController : FPSComponent
     public float walkSpeed = 1.0f;
 
     [Networked] private FPSInput.NetworkInputData Inputs { get; set; }
+    [Networked] private Vector2 moveDirection { get; set; }
+    [Networked] private Vector2 lookDelta { get; set; }
+    [Networked] private bool fired { get; set; }
 
     private void Awake()
     {
@@ -45,8 +48,11 @@ public class FPSController : FPSComponent
             Inputs = input;
         }
 
+        Move(Inputs);
+        Look(Inputs);
+
         if (playerController.IsGrounded)
-            Move(Inputs);
+        { }
     }
 
     public override void OnGameStart()
@@ -60,7 +66,16 @@ public class FPSController : FPSComponent
     {
         if(Object.HasInputAuthority)
         {
-            Debug.Log($"Direction: {inputs.direction}");
+            moveDirection = inputs.moveDirection;
+        }
+    }
+
+    private void Look(FPSInput.NetworkInputData inputs)
+    {
+        if (Object.HasInputAuthority)
+        {
+            lookDelta = inputs.lookDelta;
+            Debug.Log($"FPSController: {lookDelta}");
         }
     }
 }

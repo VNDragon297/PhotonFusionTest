@@ -29,4 +29,13 @@ public class EventManager : MonoBehaviour
         if (onPlayerListUpdated != null)
             onPlayerListUpdated(list);
     }
+
+    public Action onSceneLoaded;
+    public void SceneLoaded()
+    {
+        if(onSceneLoaded != null)
+        {
+            onSceneLoaded();
+        }
+    }
 }
