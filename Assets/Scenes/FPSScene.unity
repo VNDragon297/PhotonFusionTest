@@ -503,7 +503,7 @@ MonoBehaviour:
   _interpolationDataSource: 0
   spawnPoints: []
   playerPrefab:
-    RawGuidValue: 00000000000000000000000000000000
+    RawGuidValue: 5624326f239cded4f8ab549551a267b2
 --- !u!4 &1424404278
 Transform:
   m_ObjectHideFlags: 0

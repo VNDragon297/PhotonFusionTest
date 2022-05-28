@@ -10,12 +10,15 @@ public class NetworkGameManager : MonoBehaviour, INetworkRunnerCallbacks
     [Header("Prefabs")]
     [SerializeField] private GameManager gameManagerPrefab;
     [SerializeField] private RoomPlayer roomPlayerPrefab;
+    [SerializeField] private LevelManager levelManager;
 
     public GameMode gameMode { get; private set; }
     private NetworkRunner networkRunner;
 
     private void Start()
     {
+        if (levelManager == null)
+            Debug.LogError("Could not find LevelManager component, please make sure it is added");
         Application.runInBackground = true;
 
         DontDestroyOnLoad(gameObject);
@@ -48,7 +51,7 @@ public class NetworkGameManager : MonoBehaviour, INetworkRunnerCallbacks
             {
                 GameMode = gameMode,
                 SessionName = ServerInfo.LobbyName,
-                SceneObjectProvider = gameObject.AddComponent<NetworkSceneManagerDefault>(),
+                SceneObjectProvider = levelManager,
                 PlayerCount = ServerInfo.MaxUsers,
                 DisableClientSessionCreation = true
             });
@@ -59,7 +62,7 @@ public class NetworkGameManager : MonoBehaviour, INetworkRunnerCallbacks
             {
                 GameMode = gameMode,
                 SessionName = ServerInfo.LobbyName,
-                SceneObjectProvider = gameObject.AddComponent<NetworkSceneManagerDefault>(),
+                SceneObjectProvider = levelManager,
                 DisableClientSessionCreation = true
             });
         }
@@ -67,7 +70,7 @@ public class NetworkGameManager : MonoBehaviour, INetworkRunnerCallbacks
 
     public void StartGame(SceneIndex index)
     {
-        networkRunner.SetActiveScene((int)index);
+        LevelManager.LoadScene(index);
     }
 
     public void LeaveSession()
