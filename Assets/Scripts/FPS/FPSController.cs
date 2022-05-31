@@ -67,6 +67,16 @@ public class FPSController : FPSComponent
         if(Object.HasInputAuthority)
         {
             moveDirection = inputs.moveDirection;
+            Debug.Log($"FPSController Move Input: {inputs.moveDirection}");
+            Debug.Log($"FPSController Move Output: {inputs.moveDirection * walkSpeed * Runner.DeltaTime}");
+            playerController.Move(inputs.moveDirection * gameObject.transform.forward * Runner.DeltaTime);
+        }
+    }
+
+    private void Rotate(FPSInput.NetworkInputData inputs)
+    {
+        if (Object.HasInputAuthority)
+        {
         }
     }
 
@@ -75,7 +85,6 @@ public class FPSController : FPSComponent
         if (Object.HasInputAuthority)
         {
             lookDelta = inputs.lookDelta;
-            Debug.Log($"FPSController: {lookDelta}");
         }
     }
 }

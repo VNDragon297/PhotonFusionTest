@@ -98,8 +98,6 @@ GameObject:
   - component: {fileID: 4971529615853325619}
   - component: {fileID: 1904939676209817524}
   - component: {fileID: 4971529615853325631}
-  - component: {fileID: 4949682062872696677}
-  - component: {fileID: 981167898456995109}
   - component: {fileID: 628716126418467346}
   m_Layer: 0
   m_Name: FPSPlayerPrefab
@@ -215,8 +213,6 @@ MonoBehaviour:
   - {fileID: 4971529615853325618}
   - {fileID: 4971529615853325616}
   - {fileID: 1904939676209817524}
-  - {fileID: 4949682062872696677}
-  - {fileID: 981167898456995109}
   - {fileID: 628716126418467346}
   SimulationBehaviours: []
 --- !u!114 &1904939676209817524
@@ -263,33 +259,6 @@ MonoBehaviour:
   m_DefaultActionMap: FPSPlayer
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &4949682062872696677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4971529615853325621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9452713802091754c8e3466bff3be864, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interpolationDataSource: 0
---- !u!114 &981167898456995109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4971529615853325621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23a1f1aad5c84ee43ad95e202fa19e18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interpolationDataSource: 0
-  walkSpeed: 1
 --- !u!114 &628716126418467346
 MonoBehaviour:
   m_ObjectHideFlags: 0

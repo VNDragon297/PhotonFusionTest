@@ -65,7 +65,7 @@ public class FPSInput : FPSComponent, INetworkRunnerCallbacks
     #region Network Callbacks
     #region Inputs
     private static Vector2 ReadVector2(InputAction action) => action.ReadValue<Vector2>();
-    private static bool ReadBoolean(InputAction action) => action.ReadValue<bool>();
+    private static bool ReadBoolean(InputAction action) => action.ReadValue<float>() != 0;
 
     public void OnInput(NetworkRunner runner, NetworkInput input)
     {

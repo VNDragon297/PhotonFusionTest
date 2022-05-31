@@ -13,9 +13,336 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 3
-  lastUpdatedAtString: 2022-05-27T22:48:13.659-07:00
-  initializedAtString: 2022-05-27T22:48:13.659-07:00
+  lastUpdatedAtString: 2022-05-30T21:46:05.443-07:00
+  initializedAtString: 2022-05-30T21:46:05.443-07:00
   log:
+  - commitID: a23de21bf1e35f138673f79ef625dca3bfa7035d
+    mergeA: 
+    mergeB: 
+    authorName: BlueGulu
+    authorEmail: dragonviet9763@gmail.com
+    commitEmail: dragonviet9763@gmail.com
+    commitName: BlueGulu
+    summary: Spawning/Inputs
+    description: '- Fixed spawning bug that does run network object rename before
+      scene is fully loaded
+
+      - Added inputs for players'
+    timeString: 2022-05-28T00:03:33.000-07:00
+    commitTimeString: 2022-05-28T00:03:33.000-07:00
+    changes:
+    - path: Assets\Prefabs\FPSPlayerPrefab.prefab
+      fullPath: D:\Projects\PhotonFusionTest\Assets\Prefabs\FPSPlayerPrefab.prefab
+      projectPath: Assets\Prefabs\FPSPlayerPrefab.prefab
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\FPS\FPSController.cs
+      fullPath: D:\Projects\PhotonFusionTest\Assets\Scripts\FPS\FPSController.cs
+      projectPath: Assets\Scripts\FPS\FPSController.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\FPS\FPSInput.cs
+      fullPath: D:\Projects\PhotonFusionTest\Assets\Scripts\FPS\FPSInput.cs
+      projectPath: Assets\Scripts\FPS\FPSInput.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\Manager\EventManager.cs
+      fullPath: D:\Projects\PhotonFusionTest\Assets\Scripts\Manager\EventManager.cs
+      projectPath: Assets\Scripts\Manager\EventManager.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\Manager\LevelManager.cs
+      fullPath: D:\Projects\PhotonFusionTest\Assets\Scripts\Manager\LevelManager.cs
+      projectPath: Assets\Scripts\Manager\LevelManager.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\Manager\NetworkGameManager.cs
+      fullPath: D:\Projects\PhotonFusionTest\Assets\Scripts\Manager\NetworkGameManager.cs
+      projectPath: Assets\Scripts\Manager\NetworkGameManager.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\ArtifactDB
+      fullPath: D:\Projects\PhotonFusionTest\Library\ArtifactDB
+      projectPath: Library\ArtifactDB
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\Bee\1900b0aE.dag
+      fullPath: D:\Projects\PhotonFusionTest\Library\Bee\1900b0aE.dag
+      projectPath: Library\Bee\1900b0aE.dag
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\Bee\1900b0aP-inputdata.json
+      fullPath: D:\Projects\PhotonFusionTest\Library\Bee\1900b0aP-inputdata.json
+      projectPath: Library\Bee\1900b0aP-inputdata.json
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Bee\1900b0aP.dag
+      fullPath: D:\Projects\PhotonFusionTest\Library\Bee\1900b0aP.dag
+      projectPath: Library\Bee\1900b0aP.dag
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Bee\1900b0aP.dag_fsmtime
+      fullPath: D:\Projects\PhotonFusionTest\Library\Bee\1900b0aP.dag_fsmtime
+      projectPath: Library\Bee\1900b0aP.dag_fsmtime
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Bee\Playerc9a4b85b.dag
+      fullPath: D:\Projects\PhotonFusionTest\Library\Bee\Playerc9a4b85b.dag
+      projectPath: Library\Bee\Playerc9a4b85b.dag
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Bee\Playerc9a4b85b.dag_fsmtime
+      fullPath: D:\Projects\PhotonFusionTest\Library\Bee\Playerc9a4b85b.dag_fsmtime
+      projectPath: Library\Bee\Playerc9a4b85b.dag_fsmtime
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Bee\TundraBuildState.state
+      fullPath: D:\Projects\PhotonFusionTest\Library\Bee\TundraBuildState.state
+      projectPath: Library\Bee\TundraBuildState.state
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\Bee\TundraBuildState.state.map
+      fullPath: D:\Projects\PhotonFusionTest\Library\Bee\TundraBuildState.state.map
+      projectPath: Library\Bee\TundraBuildState.state.map
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Bee\backend_profiler0.traceevents
+      fullPath: D:\Projects\PhotonFusionTest\Library\Bee\backend_profiler0.traceevents
+      projectPath: Library\Bee\backend_profiler0.traceevents
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Bee\backend_profiler1.traceevents
+      fullPath: D:\Projects\PhotonFusionTest\Library\Bee\backend_profiler1.traceevents
+      projectPath: Library\Bee\backend_profiler1.traceevents
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\Bee\buildprogram0.traceevents
+      fullPath: D:\Projects\PhotonFusionTest\Library\Bee\buildprogram0.traceevents
+      projectPath: Library\Bee\buildprogram0.traceevents
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\Bee\buildreport.json
+      fullPath: D:\Projects\PhotonFusionTest\Library\Bee\buildreport.json
+      projectPath: Library\Bee\buildreport.json
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Bee\buildreport.json_0.traceevents
+      fullPath: D:\Projects\PhotonFusionTest\Library\Bee\buildreport.json_0.traceevents
+      projectPath: Library\Bee\buildreport.json_0.traceevents
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Bee\buildreport.json_1.traceevents
+      fullPath: D:\Projects\PhotonFusionTest\Library\Bee\buildreport.json_1.traceevents
+      projectPath: Library\Bee\buildreport.json_1.traceevents
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library\Bee\fullprofile.json
+      fullPath: D:\Projects\PhotonFusionTest\Library\Bee\fullprofile.json
+      projectPath: Library\Bee\fullprofile.json
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\Bee\tundra.digestcache
+      fullPath: D:\Projects\PhotonFusionTest\Library\Bee\tundra.digestcache
+      projectPath: Library\Bee\tundra.digestcache
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\Bee\tundra.log.json
+      fullPath: D:\Projects\PhotonFusionTest\Library\Bee\tundra.log.json
+      projectPath: Library\Bee\tundra.log.json
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\BurstCache\JIT\Hashes\Unity.Burst.bhc
+      fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\Hashes\Unity.Burst.bhc
+      projectPath: Library\BurstCache\JIT\Hashes\Unity.Burst.bhc
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\BurstCache\JIT\Hashes\Unity.Mathematics.bhc
+      fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\Hashes\Unity.Mathematics.bhc
+      projectPath: Library\BurstCache\JIT\Hashes\Unity.Mathematics.bhc
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\BurstCache\JIT\Hashes\Unity.RenderPipelines.Universal.Runtime.bhc
+      fullPath: D:\Projects\PhotonFusionTest\Library\BurstCache\JIT\Hashes\Unity.RenderPipelines.Universal.Runtime.bhc
+      projectPath: Library\BurstCache\JIT\Hashes\Unity.RenderPipelines.Universal.Runtime.bhc
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\EditorInstance.json
+      fullPath: D:\Projects\PhotonFusionTest\Library\EditorInstance.json
+      projectPath: Library\EditorInstance.json
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\InspectorExpandedItems.asset
+      fullPath: D:\Projects\PhotonFusionTest\Library\InspectorExpandedItems.asset
+      projectPath: Library\InspectorExpandedItems.asset
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\LastBuild.buildreport
+      fullPath: D:\Projects\PhotonFusionTest\Library\LastBuild.buildreport
+      projectPath: Library\LastBuild.buildreport
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\PlayerDataCache\Win64\Data\globalgamemanagers
+      fullPath: D:\Projects\PhotonFusionTest\Library\PlayerDataCache\Win64\Data\globalgamemanagers
+      projectPath: Library\PlayerDataCache\Win64\Data\globalgamemanagers
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\PlayerDataCache\Win64\Data\resources.assets
+      fullPath: D:\Projects\PhotonFusionTest\Library\PlayerDataCache\Win64\Data\resources.assets
+      projectPath: Library\PlayerDataCache\Win64\Data\resources.assets
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\PlayerDataCache\Win64\DataBuildDirtyInfo.json
+      fullPath: D:\Projects\PhotonFusionTest\Library\PlayerDataCache\Win64\DataBuildDirtyInfo.json
+      projectPath: Library\PlayerDataCache\Win64\DataBuildDirtyInfo.json
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\PlayerDataCache\Win64\ScriptsOnlyCache.yaml
+      fullPath: D:\Projects\PhotonFusionTest\Library\PlayerDataCache\Win64\ScriptsOnlyCache.yaml
+      projectPath: Library\PlayerDataCache\Win64\ScriptsOnlyCache.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\SceneVisibilityState.asset
+      fullPath: D:\Projects\PhotonFusionTest\Library\SceneVisibilityState.asset
+      projectPath: Library\SceneVisibilityState.asset
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
+      fullPath: D:\Projects\PhotonFusionTest\Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
+      projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\ScriptAssemblies\Assembly-CSharp.dll
+      fullPath: D:\Projects\PhotonFusionTest\Library\ScriptAssemblies\Assembly-CSharp.dll
+      projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\Search\transactions.db
+      fullPath: D:\Projects\PhotonFusionTest\Library\Search\transactions.db
+      projectPath: Library\Search\transactions.db
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\ShaderCache.db
+      fullPath: D:\Projects\PhotonFusionTest\Library\ShaderCache.db
+      projectPath: Library\ShaderCache.db
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\ShaderCache\EditorEncounteredVariants
+      fullPath: D:\Projects\PhotonFusionTest\Library\ShaderCache\EditorEncounteredVariants
+      projectPath: Library\ShaderCache\EditorEncounteredVariants
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\SourceAssetDB
+      fullPath: D:\Projects\PhotonFusionTest\Library\SourceAssetDB
+      projectPath: Library\SourceAssetDB
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\StateCache\MainStageHierarchy\4d\4d2a36d9faf65734f0bbefb3ee623532.json
+      fullPath: D:\Projects\PhotonFusionTest\Library\StateCache\MainStageHierarchy\4d\4d2a36d9faf65734f0bbefb3ee623532.json
+      projectPath: Library\StateCache\MainStageHierarchy\4d\4d2a36d9faf65734f0bbefb3ee623532.json
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\StateCache\PrefabStageHierarchy\19\19b194688fc7ec5076b414b63739d994.json
+      fullPath: D:\Projects\PhotonFusionTest\Library\StateCache\PrefabStageHierarchy\19\19b194688fc7ec5076b414b63739d994.json
+      projectPath: Library\StateCache\PrefabStageHierarchy\19\19b194688fc7ec5076b414b63739d994.json
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\StateCache\SceneView\21\2104b45dc4b32697cb41d1e347f9db61.json
+      fullPath: D:\Projects\PhotonFusionTest\Library\StateCache\SceneView\21\2104b45dc4b32697cb41d1e347f9db61.json
+      projectPath: Library\StateCache\SceneView\21\2104b45dc4b32697cb41d1e347f9db61.json
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\StateCache\SceneView\8c\8cd7c613bf844de3b80696e27a479d5e.json
+      fullPath: D:\Projects\PhotonFusionTest\Library\StateCache\SceneView\8c\8cd7c613bf844de3b80696e27a479d5e.json
+      projectPath: Library\StateCache\SceneView\8c\8cd7c613bf844de3b80696e27a479d5e.json
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\gfu\cache\branches.yaml
+      fullPath: D:\Projects\PhotonFusionTest\Library\gfu\cache\branches.yaml
+      projectPath: Library\gfu\cache\branches.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\gfu\cache\gitlocks.yaml
+      fullPath: D:\Projects\PhotonFusionTest\Library\gfu\cache\gitlocks.yaml
+      projectPath: Library\gfu\cache\gitlocks.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\gfu\cache\gitlog.yaml
+      fullPath: D:\Projects\PhotonFusionTest\Library\gfu\cache\gitlog.yaml
+      projectPath: Library\gfu\cache\gitlog.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\gfu\cache\gitstatusentries.yaml
+      fullPath: D:\Projects\PhotonFusionTest\Library\gfu\cache\gitstatusentries.yaml
+      projectPath: Library\gfu\cache\gitstatusentries.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\gfu\cache\gittrackingstatus.yaml
+      fullPath: D:\Projects\PhotonFusionTest\Library\gfu\cache\gittrackingstatus.yaml
+      projectPath: Library\gfu\cache\gittrackingstatus.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library\gfu\cache\repoinfo.yaml
+      fullPath: D:\Projects\PhotonFusionTest\Library\gfu\cache\repoinfo.yaml
+      projectPath: Library\gfu\cache\repoinfo.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: UserSettings\EditorUserSettings.asset
+      fullPath: D:\Projects\PhotonFusionTest\UserSettings\EditorUserSettings.asset
+      projectPath: UserSettings\EditorUserSettings.asset
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
   - commitID: f8ad8c90ba3c6372b76f673761f5c8dfc4e19537
     mergeA: 
     mergeB: 
