@@ -9,7 +9,9 @@ public class FPSController : FPSComponent
 {
     private NetworkCharacterControllerPrototype playerController;
 
+    // To be move to setting config file later
     public float walkSpeed = 1.0f;
+    public float mouseSens = 1.0f;
 
     [Networked] private FPSInput.NetworkInputData Inputs { get; set; }
     [Networked] private Vector3 moveDirection { get; set; }
@@ -76,19 +78,20 @@ public class FPSController : FPSComponent
         }
     }
 
-    private void Rotate(FPSInput.NetworkInputData inputs)
-    {
-        if (Object.HasInputAuthority)
-        {
-
-        }
-    }
-
+    public Transform headRotation;
+    float xRotation = 0f;
     private void Look(FPSInput.NetworkInputData inputs)
     {
         if (Object.HasInputAuthority)
         {
-            lookDelta = inputs.lookDelta;
+            // Using runner.Deltatime might be bad unless you have client prediction
+            float mouseX = inputs.lookDelta.x * mouseSens * Runner.DeltaTime;
+            float mouseY = inputs.lookDelta.y * mouseSens * Runner.DeltaTime;
+
+            xRotation -= mouseY;
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+            headRotation.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         }
     }
 }
