@@ -12,7 +12,7 @@ public class FPSController : FPSComponent
     public float walkSpeed = 1.0f;
 
     [Networked] private FPSInput.NetworkInputData Inputs { get; set; }
-    [Networked] private Vector2 moveDirection { get; set; }
+    [Networked] private Vector3 moveDirection { get; set; }
     [Networked] private Vector2 lookDelta { get; set; }
     [Networked] private bool fired { get; set; }
 
@@ -48,11 +48,8 @@ public class FPSController : FPSComponent
             Inputs = input;
         }
 
-        Move(Inputs);
         Look(Inputs);
-
-        if (playerController.IsGrounded)
-        { }
+        Move(Inputs);
     }
 
     public override void OnGameStart()
@@ -62,14 +59,20 @@ public class FPSController : FPSComponent
         // Initiallize things such as audio manager and loggers
     }
 
+    private Vector3 MoveAxisRemap(Vector2 controllerInput) => new Vector3(controllerInput.x, 0, controllerInput.y);
+
     private void Move(FPSInput.NetworkInputData inputs)
     {
         if(Object.HasInputAuthority)
         {
-            moveDirection = inputs.moveDirection;
-            Debug.Log($"FPSController Move Input: {inputs.moveDirection}");
-            Debug.Log($"FPSController Move Output: {inputs.moveDirection * walkSpeed * Runner.DeltaTime}");
-            playerController.Move(inputs.moveDirection * gameObject.transform.forward * Runner.DeltaTime);
+            if (playerController.IsGrounded)
+            {
+                // Player move in a 3D space, therefore must remap movement to 3D space
+                moveDirection = MoveAxisRemap(inputs.moveDirection);
+                playerController.Move(moveDirection * walkSpeed * Runner.DeltaTime);
+            }
+            else
+                playerController.Move(Vector3.zero);        // Move function is responsible for character controller falling as well
         }
     }
 
@@ -77,6 +80,7 @@ public class FPSController : FPSComponent
     {
         if (Object.HasInputAuthority)
         {
+
         }
     }
 

@@ -10,13 +10,16 @@ public class FPSInput : FPSComponent, INetworkRunnerCallbacks
 {
     public struct NetworkInputData : INetworkInput
     {
-        public const byte MOUSEBUTTON0 = 0x01;      // LMB
-        public const byte MOUSEBUTTON1 = 0x02;      // RMB
+        public const uint LMB = 1 << 0;
 
-        public byte buttons;
+        public uint Buttons;
         public Vector2 moveDirection;
         public Vector2 lookDelta;
-        public bool fired;
+
+        public bool IsUp(uint button) => IsDown(button) == false;
+        public bool IsDown(uint button) => (Buttons & button) == button;
+
+        public bool fired => IsDown(LMB);
     }
 
     public Gamepad gamepad;
@@ -76,7 +79,6 @@ public class FPSInput : FPSComponent, INetworkRunnerCallbacks
         // Read inputs
         userInput.moveDirection = ReadVector2(Move);
         userInput.lookDelta = ReadVector2(Look);
-        userInput.fired = ReadBoolean(Fire);
 
         // Send user's input to server
         input.Set(userInput);
