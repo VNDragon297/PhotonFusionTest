@@ -24,14 +24,6 @@ public class FPSEntity : FPSComponent
         }
     }
 
-    private void FixedUpdate()
-    {
-        if(camera != null)
-        {
-            Debug.Log(camera.transform.name);
-        }
-    }
-
     public static readonly List<FPSEntity> Players = new List<FPSEntity>();
 
     public override void Spawned()

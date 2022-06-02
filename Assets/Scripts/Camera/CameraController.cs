@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fusion;
 
 public class CameraController : FPSComponent, ICameraController
 {
@@ -25,5 +26,12 @@ public class CameraController : FPSComponent, ICameraController
         }
 
         return true;
+    }
+
+    public override void FixedUpdateNetwork()
+    {
+        base.FixedUpdateNetwork();
+
+
     }
 }

@@ -69,6 +69,7 @@ public class FPSController : FPSComponent
         {
             // Player move in a 3D space, therefore must remap movement to 3D space
             moveDirection = MoveAxisRemap(inputs.moveDirection);
+            Vector3 move = transform.right * moveDirection.x + transform.forward * moveDirection.z;
             playerController.Move(moveDirection * walkSpeed * Runner.DeltaTime);
         }
         else
