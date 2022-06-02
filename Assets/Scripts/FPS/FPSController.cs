@@ -65,16 +65,15 @@ public class FPSController : FPSComponent
 
     private void Move(FPSInput.NetworkInputData inputs)
     {
-        if(Object.HasInputAuthority)
+        if (playerController.IsGrounded)
         {
-            if (playerController.IsGrounded)
-            {
-                // Player move in a 3D space, therefore must remap movement to 3D space
-                moveDirection = MoveAxisRemap(inputs.moveDirection);
-                playerController.Move(moveDirection * walkSpeed * Runner.DeltaTime);
-            }
-            else
-                playerController.Move(Vector3.zero);        // Move function is responsible for character controller falling as well
+            // Player move in a 3D space, therefore must remap movement to 3D space
+            moveDirection = MoveAxisRemap(inputs.moveDirection);
+            playerController.Move(moveDirection * walkSpeed * Runner.DeltaTime);
+        }
+        else
+        {
+            playerController.Move(Vector3.zero);        // Move function is responsible for character controller falling as well
         }
     }
 

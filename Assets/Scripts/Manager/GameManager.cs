@@ -8,7 +8,10 @@ using Fusion.Utility;
 public class GameManager : NetworkBehaviour
 {
     public static GameManager instance => Singleton<GameManager>.Instance;
+
+    private ICameraController cameraController;
     public new Camera camera;
+
     public static Level currentLevel { get; private set; }
     public static bool isPlayer => currentLevel != null;
 
@@ -37,8 +40,30 @@ public class GameManager : NetworkBehaviour
         }
     }
 
+    private void LateUpdate()
+    {
+        if (cameraController == null) return;
+        if(cameraController.Equals(null))
+        {
+            Debug.LogWarning("Ghost object for camera controller");
+            cameraController = null;
+            return;
+        }
+
+        // Make sure only the GameManager of the local player is controlling the local camera
+        if (cameraController.ControlCamera(camera) == false)
+            cameraController = null;
+    }
+
     public static void SetLevel(Level level)
     {
         currentLevel = level;
     }
+
+    public static void GetCameraControl(ICameraController controller)
+    {
+        instance.cameraController = controller;
+    }
+
+    public static bool IsCameraControlled => instance.cameraController != null;
 }

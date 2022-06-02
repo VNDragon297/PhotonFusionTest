@@ -8,16 +8,27 @@ public class FPSEntity : FPSComponent
     public FPSController controller { get; private set; }
     public FPSInput input { get; private set; }
 
+    public CameraController camera { get; private set; }
+
     private void Awake()
     {
         controller = GetComponent<FPSController>();
         input = GetComponent<FPSInput>();
+        camera = GetComponent<CameraController>();
 
         // Initiallize all FPSComponent in children objects
         var components = GetComponentsInChildren<FPSComponent>();
         foreach(var component in components)
         {
             component.Init(this);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if(camera != null)
+        {
+            Debug.Log(camera.transform.name);
         }
     }
 
