@@ -6,6 +6,15 @@ using Fusion;
 public class CameraController : FPSComponent, ICameraController
 {
     public Transform camNode;
+    public Transform activeNode;
+
+    public float mouseSens = 1.0f;
+
+    private void Awake()
+    {
+        if (activeNode == null)
+            activeNode = camNode;
+    }
 
     public override void Render()
     {
@@ -33,5 +42,15 @@ public class CameraController : FPSComponent, ICameraController
         base.FixedUpdateNetwork();
 
 
+    }
+
+    public void FollowNode(Camera cam)
+    {
+        cam.transform.position = activeNode.position;
+    }
+
+    public void RotateCamera(Camera cam, float xRot)
+    {
+        cam.transform.localRotation = Quaternion.Euler(xRot * mouseSens, 0f, 0f);
     }
 }

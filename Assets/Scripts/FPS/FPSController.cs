@@ -15,7 +15,7 @@ public class FPSController : FPSComponent
 
     [Networked] private FPSInput.NetworkInputData Inputs { get; set; }
     [Networked] private Vector3 moveDirection { get; set; }
-    [Networked] private Vector2 lookDelta { get; set; }
+    [Networked(OnChanged = nameof(OnMouseMovement))] private Vector2 lookDelta { get; set; }
     [Networked] private bool fired { get; set; }
 
     private void Awake()
@@ -84,14 +84,23 @@ public class FPSController : FPSComponent
     {
         if (Object.HasInputAuthority)
         {
-            // Using runner.Deltatime might be bad unless you have client prediction
-            float mouseX = inputs.lookDelta.x * mouseSens * Runner.DeltaTime;
-            float mouseY = inputs.lookDelta.y * mouseSens * Runner.DeltaTime;
+            if(TryGetComponent<CameraController>(out CameraController camController))
+            {
+                // Using runner.Deltatime might be bad unless you have client prediction
+                float mouseX = inputs.lookDelta.x * mouseSens * Runner.DeltaTime;
+                float mouseY = inputs.lookDelta.y * mouseSens * Runner.DeltaTime;
 
-            xRotation -= mouseY;
-            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+                xRotation -= mouseY;
+                xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-            headRotation.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+                GameManager.RotateCamera(xRotation);
+                transform.Rotate(mouseX * Vector3.up);      // Currently rotating the body of the mesh, but not rotating the camera as camera is not attached to mesh directly
+            }
         }
+    }
+
+    private static void OnMouseMovement(Changed<FPSController> changed)
+    {
+        // changed.Behaviour.lookDelta
     }
 }

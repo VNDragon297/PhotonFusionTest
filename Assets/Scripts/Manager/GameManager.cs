@@ -53,6 +53,15 @@ public class GameManager : NetworkBehaviour
         // Make sure only the GameManager of the local player is controlling the local camera
         if (cameraController.ControlCamera(camera) == false)
             cameraController = null;
+
+        if (cameraController != null)
+            cameraController.FollowNode(camera);
+    }
+
+    public static void RotateCamera(float xRot)
+    {
+        if (instance.cameraController != null)
+            instance.cameraController.RotateCamera(instance.camera, xRot);
     }
 
     public static void SetLevel(Level level)
