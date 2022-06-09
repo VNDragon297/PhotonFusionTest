@@ -9,7 +9,7 @@ public class GameManager : NetworkBehaviour
 {
     public static GameManager instance => Singleton<GameManager>.Instance;
 
-    private ICameraController cameraController;
+    private CameraControllerBase cameraController;
     public new Camera camera;
 
     public static Level currentLevel { get; private set; }
@@ -22,6 +22,8 @@ public class GameManager : NetworkBehaviour
     {
         // Invoke an event or do something here
     }
+    public static bool IsCameraControlled => instance.cameraController != null;
+    public static void GetCameraControl(CameraControllerBase controller) => instance.cameraController = controller;
 
     private void Awake()
     {
@@ -40,6 +42,11 @@ public class GameManager : NetworkBehaviour
         }
     }
 
+    public static void SetLevel(Level level)
+    {
+        currentLevel = level;
+    }
+
     private void LateUpdate()
     {
         if (cameraController == null) return;
@@ -50,29 +57,7 @@ public class GameManager : NetworkBehaviour
             return;
         }
 
-        // Make sure only the GameManager of the local player is controlling the local camera
         if (cameraController.ControlCamera(camera) == false)
             cameraController = null;
-
-        if (cameraController != null)
-            cameraController.FollowNode(camera);
     }
-
-    public static void RotateCamera(float xRot)
-    {
-        if (instance.cameraController != null)
-            instance.cameraController.RotateCamera(instance.camera, xRot);
-    }
-
-    public static void SetLevel(Level level)
-    {
-        currentLevel = level;
-    }
-
-    public static void GetCameraControl(ICameraController controller)
-    {
-        instance.cameraController = controller;
-    }
-
-    public static bool IsCameraControlled => instance.cameraController != null;
 }

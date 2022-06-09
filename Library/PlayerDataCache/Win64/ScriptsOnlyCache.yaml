@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - Ball
     - ControllerPrototype
     - EventManager
+    - FPSCameraController
     - FPSController
     - FPSEntity
     - FPSInput
@@ -32,7 +33,6 @@ ScriptsOnlyBuild:
     - Fusion.NetworkRigidbody2D
     - Fusion.NetworkTransform
     Unity.InputSystem.dll:
-    - UnityEngine.InputSystem.Editor.PlayerInputEditor
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
     - UnityEngine.InputSystem.InputSettings
@@ -305,17 +305,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3296}
     - Class: 114
+      Script: {instanceID: 4134}
+    - Class: 114
       Script: {instanceID: 4930}
     - Class: 114
       Script: {instanceID: 6440}
     - Class: 114
-      Script: {instanceID: 7960}
+      Script: {instanceID: 7962}
     - Class: 114
-      Script: {instanceID: 9120}
+      Script: {instanceID: 9124}
     - Class: 114
-      Script: {instanceID: 10048}
+      Script: {instanceID: 10052}
     - Class: 114
-      Script: {instanceID: 10104}
+      Script: {instanceID: 10108}
+    - Class: 114
+      Script: {instanceID: 32678}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -436,31 +440,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6836}
     - Class: 114
-      Script: {instanceID: 6858}
+      Script: {instanceID: 6860}
     - Class: 114
-      Script: {instanceID: 6938}
+      Script: {instanceID: 6940}
     - Class: 114
-      Script: {instanceID: 6950}
+      Script: {instanceID: 6952}
     - Class: 114
-      Script: {instanceID: 7206}
+      Script: {instanceID: 7208}
     - Class: 114
-      Script: {instanceID: 7210}
+      Script: {instanceID: 7212}
     - Class: 114
-      Script: {instanceID: 7232}
+      Script: {instanceID: 7234}
     - Class: 114
-      Script: {instanceID: 7252}
+      Script: {instanceID: 7254}
     - Class: 114
-      Script: {instanceID: 7258}
+      Script: {instanceID: 7260}
     - Class: 114
-      Script: {instanceID: 7332}
+      Script: {instanceID: 7334}
     - Class: 114
-      Script: {instanceID: 7616}
+      Script: {instanceID: 7618}
     - Class: 114
-      Script: {instanceID: 7786}
+      Script: {instanceID: 7788}
     - Class: 114
-      Script: {instanceID: 7960}
-    - Class: 114
-      Script: {instanceID: 7978}
+      Script: {instanceID: 7962}
     - Class: 114
       Script: {instanceID: 7980}
     - Class: 114
@@ -468,63 +470,65 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7984}
     - Class: 114
-      Script: {instanceID: 7996}
+      Script: {instanceID: 7986}
     - Class: 114
-      Script: {instanceID: 8070}
+      Script: {instanceID: 7998}
     - Class: 114
-      Script: {instanceID: 8084}
+      Script: {instanceID: 8072}
     - Class: 114
-      Script: {instanceID: 8132}
+      Script: {instanceID: 8086}
     - Class: 114
-      Script: {instanceID: 8188}
+      Script: {instanceID: 8134}
     - Class: 114
-      Script: {instanceID: 8194}
+      Script: {instanceID: 8190}
     - Class: 114
-      Script: {instanceID: 8336}
+      Script: {instanceID: 8196}
     - Class: 114
-      Script: {instanceID: 8350}
+      Script: {instanceID: 8340}
     - Class: 114
-      Script: {instanceID: 8400}
+      Script: {instanceID: 8354}
     - Class: 114
-      Script: {instanceID: 8406}
+      Script: {instanceID: 8404}
     - Class: 114
-      Script: {instanceID: 8476}
+      Script: {instanceID: 8410}
     - Class: 114
-      Script: {instanceID: 8530}
+      Script: {instanceID: 8480}
     - Class: 114
-      Script: {instanceID: 8586}
+      Script: {instanceID: 8534}
     - Class: 114
-      Script: {instanceID: 8720}
+      Script: {instanceID: 8590}
     - Class: 114
-      Script: {instanceID: 8734}
+      Script: {instanceID: 8724}
     - Class: 114
-      Script: {instanceID: 8928}
+      Script: {instanceID: 8738}
     - Class: 114
-      Script: {instanceID: 9098}
+      Script: {instanceID: 8932}
     - Class: 114
-      Script: {instanceID: 9120}
+      Script: {instanceID: 9102}
     - Class: 114
-      Script: {instanceID: 9196}
+      Script: {instanceID: 9124}
     - Class: 114
-      Script: {instanceID: 9636}
+      Script: {instanceID: 9200}
     - Class: 114
-      Script: {instanceID: 9814}
+      Script: {instanceID: 9640}
     - Class: 114
-      Script: {instanceID: 10030}
+      Script: {instanceID: 9818}
     - Class: 114
-      Script: {instanceID: 10048}
+      Script: {instanceID: 10034}
     - Class: 114
-      Script: {instanceID: 10104}
+      Script: {instanceID: 10052}
     - Class: 114
-      Script: {instanceID: 10132}
+      Script: {instanceID: 10108}
     - Class: 114
-      Script: {instanceID: 10232}
+      Script: {instanceID: 10136}
     - Class: 114
-      Script: {instanceID: 10556}
+      Script: {instanceID: 10236}
     - Class: 114
-      Script: {instanceID: 10918}
+      Script: {instanceID: 10560}
     - Class: 114
-      Script: {instanceID: 10978}
+      Script: {instanceID: 10922}
+    - Class: 114
+      Script: {instanceID: 10982}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1518,6 +1522,12 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 8ecca447466f4bc3efcd587cfa3ce309
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraControllerBase
+  - hash:
+      serializedVersion: 2
       Hash: 7dbf450932234158be58ca2027563dcb
     assemblyName: Unity.RenderPipelines.Core.Runtime.dll
     namespaceName: UnityEngine.Rendering.UI
@@ -2386,6 +2396,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: e7cbeb4f760ea0e2012df72575a31799
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FPSCameraController
   platform: 19
   scenePathNames:
   - Assets/Scenes/Lobby.unity

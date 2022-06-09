@@ -99,7 +99,6 @@ GameObject:
   - component: {fileID: 4971529615853325631}
   - component: {fileID: 5129404313363449214}
   - component: {fileID: 219190273751206175}
-  - component: {fileID: 7037246659611166895}
   m_Layer: 0
   m_Name: FPSPlayerPrefab
   m_TagString: Untagged
@@ -218,7 +217,6 @@ MonoBehaviour:
   - {fileID: 4971529615853325616}
   - {fileID: 5129404313363449214}
   - {fileID: 219190273751206175}
-  - {fileID: 7037246659611166895}
   SimulationBehaviours: []
 --- !u!114 &4971529615853325631
 MonoBehaviour:
@@ -352,22 +350,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
---- !u!114 &7037246659611166895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4971529615853325621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 430c9ca5a86dbb744bcd3201604f9ea3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interpolationDataSource: 0
-  camNode: {fileID: 7769623463296345066}
-  activeNode: {fileID: 0}
-  mouseSens: 1
 --- !u!1 &6688963239965072417
 GameObject:
   m_ObjectHideFlags: 0
