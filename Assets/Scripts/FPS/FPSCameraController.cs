@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fusion;
 
-public class FPSCameraController : CameraControllerBase
+public class FPSCameraController : ICameraController
 {
     public Transform camNode;
     public Transform activeNode;
@@ -35,7 +35,7 @@ public class FPSCameraController : CameraControllerBase
 
         if(cam != null)
             cam.transform.localRotation = Quaternion.Euler(xRot * mouseSens, 0f, 0f);
-        transform.Rotate(yRot * Vector3.up);      // Currently rotating the body of the mesh, but not rotating the camera as camera is not attached to mesh directly
+        transform.Rotate(yRot * Vector3.up);
     }
 
     private void OnDestroy()

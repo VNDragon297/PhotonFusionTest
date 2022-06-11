@@ -9,7 +9,7 @@ public class GameManager : NetworkBehaviour
 {
     public static GameManager instance => Singleton<GameManager>.Instance;
 
-    private CameraControllerBase cameraController;
+    private ICameraController cameraController;
     public new Camera camera;
 
     public static Level currentLevel { get; private set; }
@@ -23,7 +23,7 @@ public class GameManager : NetworkBehaviour
         // Invoke an event or do something here
     }
     public static bool IsCameraControlled => instance.cameraController != null;
-    public static void GetCameraControl(CameraControllerBase controller) => instance.cameraController = controller;
+    public static void GetCameraControl(ICameraController controller) => instance.cameraController = controller;
 
     private void Awake()
     {

@@ -38,18 +38,4 @@ public class EventManager : MonoBehaviour
             onSceneLoaded();
         }
     }
-
-    public Action<Transform> onCamBasePositionUpdate;
-    public void UpdateCameraBasePosition(Transform pos)
-    {
-        if (onCamBasePositionUpdate != null)
-            onCamBasePositionUpdate(pos);
-    }
-
-    public Action<float, float> onViewportRotate;
-    public void UpdateViewportRotation(float xRot, float yRot)
-    {
-        if (onViewportRotate != null)
-            onViewportRotate(xRot, yRot);
-    }
 }

@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fusion;
 using System;
+using UnityEngine.Animations;
 
 [OrderAfter(typeof(NetworkCharacterControllerPrototype))]
 public class FPSController : FPSComponent
 {
     private NetworkCharacterControllerPrototype playerController;
+    private FPSAnimController animController;
 
     // To be move to setting config file later
     public float walkSpeed = 1.0f;
@@ -17,10 +19,12 @@ public class FPSController : FPSComponent
     [Networked] private Vector3 moveDirection { get; set; }
     [Networked] private Vector2 lookDelta { get; set; }
     [Networked] private bool fired { get; set; }
+    public Vector3 MoveDirection => moveDirection;
 
     private void Awake()
     {
         playerController = GetComponent<NetworkCharacterControllerPrototype>();
+        animController = GetComponent<FPSAnimController>();
     }
 
     public override void Spawned()
@@ -70,15 +74,12 @@ public class FPSController : FPSComponent
             // Player move in a 3D space, therefore must remap movement to 3D space
             moveDirection = MoveAxisRemap(inputs.moveDirection);
             Vector3 move = transform.right * moveDirection.x + transform.forward * moveDirection.z;
-            playerController.Move(moveDirection * walkSpeed * Runner.DeltaTime);
+            playerController.Move(move * walkSpeed * Runner.DeltaTime);
         }
         else
         {
             playerController.Move(Vector3.zero);        // Move function is responsible for character controller falling as well
         }
-
-        if (Object.HasInputAuthority)
-            EventManager.instance.UpdateCameraBasePosition(this.transform);
     }
 
     public Transform headRotation;
@@ -94,7 +95,7 @@ public class FPSController : FPSComponent
             xRotation -= mouseY;
             xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-            EventManager.instance.UpdateViewportRotation(xRotation, mouseX);
+            transform.Rotate(mouseX * Vector3.up);
         }
     }
 }

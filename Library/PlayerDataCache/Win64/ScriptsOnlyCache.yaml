@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - Ball
     - ControllerPrototype
     - EventManager
+    - FPSAnimController
     - FPSCameraController
     - FPSController
     - FPSEntity
@@ -26,6 +27,7 @@ ScriptsOnlyBuild:
     Fusion.Realtime.dll:
     - Fusion.Photon.Realtime.PhotonAppSettings
     Fusion.Runtime.dll:
+    - Fusion.NetworkMecanimAnimator
     - Fusion.NetworkObject
     - Fusion.NetworkPrefabSourceUnityStatic
     - Fusion.NetworkProjectConfigAsset
@@ -90,6 +92,14 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -118,6 +128,7 @@ ScriptsOnlyBuild:
     Fusion.Runtime:
     - Fusion.Accuracy
     - Fusion.AccuracyDefaults
+    - Fusion.AnimatorSyncSettings
     - Fusion.HeapConfiguration
     - Fusion.InterpolatedErrorCorrectionSettings
     - Fusion.InterpolationConfiguration
@@ -309,17 +320,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4930}
     - Class: 114
-      Script: {instanceID: 6440}
+      Script: {instanceID: 5006}
     - Class: 114
-      Script: {instanceID: 7962}
+      Script: {instanceID: 6442}
+    - Class: 114
+      Script: {instanceID: 7964}
     - Class: 114
       Script: {instanceID: 9124}
     - Class: 114
       Script: {instanceID: 10052}
     - Class: 114
       Script: {instanceID: 10108}
-    - Class: 114
-      Script: {instanceID: 32678}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -355,9 +366,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 62
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -418,53 +437,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4930}
     - Class: 114
-      Script: {instanceID: 5158}
+      Script: {instanceID: 5160}
     - Class: 114
-      Script: {instanceID: 5318}
+      Script: {instanceID: 5320}
     - Class: 114
-      Script: {instanceID: 5486}
+      Script: {instanceID: 5488}
     - Class: 114
-      Script: {instanceID: 5508}
+      Script: {instanceID: 5510}
     - Class: 114
-      Script: {instanceID: 5754}
+      Script: {instanceID: 5756}
     - Class: 114
-      Script: {instanceID: 5884}
+      Script: {instanceID: 5886}
     - Class: 114
-      Script: {instanceID: 6426}
+      Script: {instanceID: 6428}
     - Class: 114
-      Script: {instanceID: 6648}
+      Script: {instanceID: 6650}
     - Class: 114
-      Script: {instanceID: 6732}
+      Script: {instanceID: 6734}
     - Class: 114
-      Script: {instanceID: 6738}
+      Script: {instanceID: 6740}
     - Class: 114
-      Script: {instanceID: 6836}
+      Script: {instanceID: 6838}
     - Class: 114
-      Script: {instanceID: 6860}
+      Script: {instanceID: 6862}
     - Class: 114
-      Script: {instanceID: 6940}
+      Script: {instanceID: 6942}
     - Class: 114
-      Script: {instanceID: 6952}
+      Script: {instanceID: 6954}
     - Class: 114
-      Script: {instanceID: 7208}
+      Script: {instanceID: 7210}
     - Class: 114
-      Script: {instanceID: 7212}
+      Script: {instanceID: 7214}
     - Class: 114
-      Script: {instanceID: 7234}
+      Script: {instanceID: 7236}
     - Class: 114
-      Script: {instanceID: 7254}
+      Script: {instanceID: 7256}
     - Class: 114
-      Script: {instanceID: 7260}
+      Script: {instanceID: 7262}
     - Class: 114
-      Script: {instanceID: 7334}
+      Script: {instanceID: 7336}
     - Class: 114
-      Script: {instanceID: 7618}
+      Script: {instanceID: 7620}
     - Class: 114
-      Script: {instanceID: 7788}
+      Script: {instanceID: 7790}
     - Class: 114
       Script: {instanceID: 7962}
     - Class: 114
-      Script: {instanceID: 7980}
+      Script: {instanceID: 7964}
     - Class: 114
       Script: {instanceID: 7982}
     - Class: 114
@@ -472,17 +491,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7986}
     - Class: 114
-      Script: {instanceID: 7998}
+      Script: {instanceID: 7988}
     - Class: 114
-      Script: {instanceID: 8072}
+      Script: {instanceID: 8000}
     - Class: 114
-      Script: {instanceID: 8086}
+      Script: {instanceID: 8074}
     - Class: 114
-      Script: {instanceID: 8134}
+      Script: {instanceID: 8088}
     - Class: 114
-      Script: {instanceID: 8190}
+      Script: {instanceID: 8136}
     - Class: 114
-      Script: {instanceID: 8196}
+      Script: {instanceID: 8192}
+    - Class: 114
+      Script: {instanceID: 8198}
     - Class: 114
       Script: {instanceID: 8340}
     - Class: 114
@@ -529,6 +550,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10922}
     - Class: 114
       Script: {instanceID: 10982}
+    - Class: 114
+      Script: {instanceID: 30478}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -536,6 +559,8 @@ ScriptsOnlyBuild:
     - Class: 135
       Script: {instanceID: 0}
     - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 143
       Script: {instanceID: 0}
@@ -552,6 +577,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 1818360609
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -622,7 +649,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 150f48639467da47f6f9164d22f3bdda
+      Hash: 01ce7988bc32af03d9c2596e4cc38d99
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FPSController
@@ -1178,6 +1205,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: e7cbeb4f760ea0e2012df72575a31799
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FPSCameraController
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -2398,10 +2431,10 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: e7cbeb4f760ea0e2012df72575a31799
+      Hash: 8bbb7ea7d3dedc43595ea96f44b31153
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: FPSCameraController
+    className: FPSAnimController
   platform: 19
   scenePathNames:
   - Assets/Scenes/Lobby.unity

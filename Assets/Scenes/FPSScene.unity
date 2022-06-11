@@ -712,7 +712,7 @@ GameObject:
   - component: {fileID: 1791419263712326860}
   - component: {fileID: 1791419263712326862}
   m_Layer: 0
-  m_Name: FPSPlayerPrefab
+  m_Name: CameraBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

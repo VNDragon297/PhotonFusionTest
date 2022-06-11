@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\UI\MainUIScreen.cs" />
     <Compile Include="Assets\Scripts\UI\SessionConfigUI.cs" />
     <Compile Include="Assets\Scripts\FPS\FPSInput.cs" />
+    <Compile Include="Assets\Scripts\FPS\FPSCameraController.cs" />
     <Compile Include="Assets\Photon\Fusion\Scripts\Utilities\FusionEditorUtilitiesExternal.cs" />
     <Compile Include="Assets\Photon\Fusion\Scripts\FusionBurstIntegration.cs" />
     <Compile Include="Assets\Photon\Fusion\Scripts\Prototyping\ToggleRunnerProvideInput.cs" />
@@ -94,7 +95,7 @@
     <Compile Include="Assets\Scripts\Map\Level.cs" />
     <Compile Include="Assets\Photon\Fusion\Scripts\Utilities\NetworkProjectUtilities.cs" />
     <Compile Include="Assets\Scripts\Ball.cs" />
-    <Compile Include="Assets\Scripts\Camera\CameraControllerBase.cs" />
+    <Compile Include="Assets\Scripts\Camera\ICameraController.cs" />
     <Compile Include="Assets\Photon\Fusion\Scripts\Prototyping\SpawnPoints\SpawnerPrototypeT.cs" />
     <Compile Include="Assets\Photon\Fusion\Scripts\Prototyping\NetworkSceneManagerBase.cs" />
     <Compile Include="Assets\Scripts\SampleNetworkInputData.cs" />
@@ -129,7 +130,7 @@
     <Compile Include="Assets\Photon\Fusion\Scripts\Prototyping\SpawnPoints\PlayerSpawnPointManagerPrototype.cs" />
     <Compile Include="Assets\Photon\Fusion\Scripts\Prototyping\ControllerPrototype.cs" />
     <Compile Include="Assets\Photon\Fusion\Scripts\FusionGraph.cs" />
-    <Compile Include="Assets\Scripts\FPS\FPSCameraController.cs" />
+    <Compile Include="Assets\Scripts\FPS\FPSAnimController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
