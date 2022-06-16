@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 219190273751206175}
   - component: {fileID: 4800139421704424522}
   - component: {fileID: 2260319654036529096}
-  - component: {fileID: 936611809488367330}
+  - component: {fileID: -8786040213150512873}
   m_Layer: 0
   m_Name: FPSPlayerPrefab
   m_TagString: Untagged
@@ -110,7 +110,6 @@ MonoBehaviour:
   _interpolationDataSource: 0
   walkSpeed: 50
   mouseSens: 1
-  renderMesh: {fileID: 7020385009488232813}
   headRotation: {fileID: 7769623463296345066}
 --- !u!114 &4971529615853325619
 MonoBehaviour:
@@ -140,6 +139,7 @@ MonoBehaviour:
   - {fileID: 219190273751206175}
   - {fileID: 4800139421704424522}
   - {fileID: 2260319654036529096}
+  - {fileID: -8786040213150512873}
   SimulationBehaviours: []
 --- !u!114 &4971529615853325631
 MonoBehaviour:
@@ -317,23 +317,22 @@ MonoBehaviour:
   _interpolationDataSource: 0
   networkAnimator: {fileID: 4800139421704424522}
   animator: {fileID: 6976863785066810618}
---- !u!1818360609 &936611809488367330
-RotationConstraint:
+--- !u!114 &-8786040213150512873
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4971529615853325621}
   m_Enabled: 1
-  m_Weight: 1
-  m_RotationAtRest: {x: 0, y: 0, z: 0}
-  m_RotationOffset: {x: 0, y: 0, z: 0}
-  m_AffectRotationX: 1
-  m_AffectRotationY: 0
-  m_AffectRotationZ: 1
-  m_IsContraintActive: 1
-  m_IsLocked: 1
-  m_Sources: []
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef6b04e9bfcaa44eb9ea269d0eb9c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  camNode: {fileID: 7769623463296345066}
+  activeNode: {fileID: 0}
+  mouseSens: 1
 --- !u!1 &5984226989058331500
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,7 +389,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6688963239965072417}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalPosition: {x: 0, y: 0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

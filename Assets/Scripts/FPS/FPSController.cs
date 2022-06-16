@@ -82,6 +82,7 @@ public class FPSController : FPSComponent
         }
     }
 
+    [Header("Camera Position")]
     public Transform headRotation;
     float xRotation = 0f;
     private void Look(FPSInput.NetworkInputData inputs)
@@ -95,7 +96,9 @@ public class FPSController : FPSComponent
             xRotation -= mouseY;
             xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
+            // Currently broken on clients
             transform.Rotate(mouseX * Vector3.up);
+            headRotation.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         }
     }
 }

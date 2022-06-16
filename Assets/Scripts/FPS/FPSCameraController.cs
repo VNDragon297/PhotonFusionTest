@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fusion;
 
-public class FPSCameraController : ICameraController
+public class FPSCameraController : FPSComponent, ICameraController
 {
     public Transform camNode;
     public Transform activeNode;
@@ -19,28 +19,31 @@ public class FPSCameraController : ICameraController
         {
             GameManager.GetCameraControl(this);
         }
-
-        EventManager.instance.onCamBasePositionUpdate += FollowPosition;
-        EventManager.instance.onViewportRotate += RotateCamera;
     }
 
-    private void FollowPosition(Transform pos)
+    public override void Render()
     {
-        this.transform.position = pos.position;
+        base.Render();
+
+        if (Object.HasInputAuthority && !GameManager.IsCameraControlled)
+            GameManager.GetCameraControl(this);
     }
 
-    public void RotateCamera(float xRot, float yRot)
+    public bool ControlCamera(Camera cam)
     {
-        var cam = GetComponentInChildren<Camera>();
+        if(this.Equals(null))
+        {
+            Debug.LogWarning("Releasing camera from player");
+            return false;
+        }
 
-        if(cam != null)
-            cam.transform.localRotation = Quaternion.Euler(xRot * mouseSens, 0f, 0f);
-        transform.Rotate(yRot * Vector3.up);
+        CameraPositionLerp(cam);
+        return true;
     }
 
-    private void OnDestroy()
+    private void CameraPositionLerp(Camera cam)
     {
-        EventManager.instance.onCamBasePositionUpdate -= FollowPosition;
-        EventManager.instance.onViewportRotate -= RotateCamera;
+        cam.transform.position = Vector3.Lerp(cam.transform.position, camNode.position, Time.deltaTime * 100f);
+        cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, camNode.rotation, Time.deltaTime * 100f);
     }
 }

@@ -35,6 +35,7 @@ ScriptsOnlyBuild:
     - Fusion.NetworkRigidbody2D
     - Fusion.NetworkTransform
     Unity.InputSystem.dll:
+    - UnityEngine.InputSystem.Editor.PlayerInputEditor
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
     - UnityEngine.InputSystem.InputSettings
@@ -95,10 +96,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -318,19 +317,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4134}
     - Class: 114
-      Script: {instanceID: 4930}
+      Script: {instanceID: 4932}
     - Class: 114
-      Script: {instanceID: 5006}
+      Script: {instanceID: 6444}
     - Class: 114
-      Script: {instanceID: 6442}
+      Script: {instanceID: 7966}
     - Class: 114
-      Script: {instanceID: 7964}
+      Script: {instanceID: 9126}
     - Class: 114
-      Script: {instanceID: 9124}
+      Script: {instanceID: 10054}
     - Class: 114
-      Script: {instanceID: 10052}
-    - Class: 114
-      Script: {instanceID: 10108}
+      Script: {instanceID: 10110}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -433,59 +430,61 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4744}
     - Class: 114
-      Script: {instanceID: 4816}
+      Script: {instanceID: 4798}
     - Class: 114
-      Script: {instanceID: 4930}
+      Script: {instanceID: 4818}
     - Class: 114
-      Script: {instanceID: 5160}
+      Script: {instanceID: 4932}
     - Class: 114
-      Script: {instanceID: 5320}
+      Script: {instanceID: 5008}
     - Class: 114
-      Script: {instanceID: 5488}
+      Script: {instanceID: 5162}
     - Class: 114
-      Script: {instanceID: 5510}
+      Script: {instanceID: 5322}
     - Class: 114
-      Script: {instanceID: 5756}
+      Script: {instanceID: 5490}
     - Class: 114
-      Script: {instanceID: 5886}
+      Script: {instanceID: 5512}
     - Class: 114
-      Script: {instanceID: 6428}
+      Script: {instanceID: 5758}
     - Class: 114
-      Script: {instanceID: 6650}
+      Script: {instanceID: 5888}
     - Class: 114
-      Script: {instanceID: 6734}
+      Script: {instanceID: 6430}
     - Class: 114
-      Script: {instanceID: 6740}
+      Script: {instanceID: 6652}
     - Class: 114
-      Script: {instanceID: 6838}
+      Script: {instanceID: 6736}
     - Class: 114
-      Script: {instanceID: 6862}
+      Script: {instanceID: 6742}
     - Class: 114
-      Script: {instanceID: 6942}
+      Script: {instanceID: 6840}
     - Class: 114
-      Script: {instanceID: 6954}
+      Script: {instanceID: 6864}
     - Class: 114
-      Script: {instanceID: 7210}
+      Script: {instanceID: 6944}
     - Class: 114
-      Script: {instanceID: 7214}
+      Script: {instanceID: 6956}
     - Class: 114
-      Script: {instanceID: 7236}
+      Script: {instanceID: 7212}
     - Class: 114
-      Script: {instanceID: 7256}
+      Script: {instanceID: 7216}
     - Class: 114
-      Script: {instanceID: 7262}
+      Script: {instanceID: 7238}
     - Class: 114
-      Script: {instanceID: 7336}
+      Script: {instanceID: 7258}
     - Class: 114
-      Script: {instanceID: 7620}
+      Script: {instanceID: 7264}
     - Class: 114
-      Script: {instanceID: 7790}
+      Script: {instanceID: 7338}
     - Class: 114
-      Script: {instanceID: 7962}
+      Script: {instanceID: 7622}
+    - Class: 114
+      Script: {instanceID: 7792}
     - Class: 114
       Script: {instanceID: 7964}
     - Class: 114
-      Script: {instanceID: 7982}
+      Script: {instanceID: 7966}
     - Class: 114
       Script: {instanceID: 7984}
     - Class: 114
@@ -493,65 +492,65 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7988}
     - Class: 114
-      Script: {instanceID: 8000}
+      Script: {instanceID: 7990}
     - Class: 114
-      Script: {instanceID: 8074}
+      Script: {instanceID: 8002}
     - Class: 114
-      Script: {instanceID: 8088}
+      Script: {instanceID: 8076}
     - Class: 114
-      Script: {instanceID: 8136}
+      Script: {instanceID: 8090}
     - Class: 114
-      Script: {instanceID: 8192}
+      Script: {instanceID: 8138}
     - Class: 114
-      Script: {instanceID: 8198}
+      Script: {instanceID: 8194}
     - Class: 114
-      Script: {instanceID: 8340}
+      Script: {instanceID: 8200}
     - Class: 114
-      Script: {instanceID: 8354}
+      Script: {instanceID: 8342}
     - Class: 114
-      Script: {instanceID: 8404}
+      Script: {instanceID: 8356}
     - Class: 114
-      Script: {instanceID: 8410}
+      Script: {instanceID: 8406}
     - Class: 114
-      Script: {instanceID: 8480}
+      Script: {instanceID: 8412}
     - Class: 114
-      Script: {instanceID: 8534}
+      Script: {instanceID: 8482}
     - Class: 114
-      Script: {instanceID: 8590}
+      Script: {instanceID: 8536}
     - Class: 114
-      Script: {instanceID: 8724}
+      Script: {instanceID: 8592}
     - Class: 114
-      Script: {instanceID: 8738}
+      Script: {instanceID: 8726}
     - Class: 114
-      Script: {instanceID: 8932}
+      Script: {instanceID: 8740}
     - Class: 114
-      Script: {instanceID: 9102}
+      Script: {instanceID: 8934}
     - Class: 114
-      Script: {instanceID: 9124}
+      Script: {instanceID: 9104}
     - Class: 114
-      Script: {instanceID: 9200}
+      Script: {instanceID: 9126}
     - Class: 114
-      Script: {instanceID: 9640}
+      Script: {instanceID: 9202}
     - Class: 114
-      Script: {instanceID: 9818}
+      Script: {instanceID: 9642}
     - Class: 114
-      Script: {instanceID: 10034}
+      Script: {instanceID: 9820}
     - Class: 114
-      Script: {instanceID: 10052}
+      Script: {instanceID: 10036}
     - Class: 114
-      Script: {instanceID: 10108}
+      Script: {instanceID: 10054}
     - Class: 114
-      Script: {instanceID: 10136}
+      Script: {instanceID: 10110}
     - Class: 114
-      Script: {instanceID: 10236}
+      Script: {instanceID: 10138}
     - Class: 114
-      Script: {instanceID: 10560}
+      Script: {instanceID: 10238}
     - Class: 114
-      Script: {instanceID: 10922}
+      Script: {instanceID: 10562}
     - Class: 114
-      Script: {instanceID: 10982}
+      Script: {instanceID: 10924}
     - Class: 114
-      Script: {instanceID: 30478}
+      Script: {instanceID: 10984}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -577,8 +576,6 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
-      Script: {instanceID: 0}
-    - Class: 1818360609
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -649,7 +646,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 01ce7988bc32af03d9c2596e4cc38d99
+      Hash: 150f48639467da47f6f9164d22f3bdda
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FPSController
@@ -1177,6 +1174,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerToggleHistory
   - hash:
       serializedVersion: 2
+      Hash: 8bbb7ea7d3dedc43595ea96f44b31153
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FPSAnimController
+  - hash:
+      serializedVersion: 2
       Hash: bf178479a8dad5b149b90a9a47be1acb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1207,7 +1210,7 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: e7cbeb4f760ea0e2012df72575a31799
+      Hash: 6e8a288f9b5645bcca15c872d9da055f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FPSCameraController
@@ -1553,12 +1556,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: HorizontalLayoutGroup
-  - hash:
-      serializedVersion: 2
-      Hash: 8ecca447466f4bc3efcd587cfa3ce309
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CameraControllerBase
   - hash:
       serializedVersion: 2
       Hash: 7dbf450932234158be58ca2027563dcb
@@ -2429,12 +2426,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 8bbb7ea7d3dedc43595ea96f44b31153
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FPSAnimController
   platform: 19
   scenePathNames:
   - Assets/Scenes/Lobby.unity

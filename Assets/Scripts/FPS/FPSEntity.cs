@@ -8,13 +8,13 @@ public class FPSEntity : FPSComponent
     public FPSController controller { get; private set; }
     public FPSInput input { get; private set; }
 
-    public FPSCameraController camera { get; private set; }
+    public FPSCameraController cameraControl { get; private set; }
 
     private void Awake()
     {
         controller = GetComponent<FPSController>();
         input = GetComponent<FPSInput>();
-        camera = GetComponent<FPSCameraController>();
+        cameraControl = GetComponent<FPSCameraController>();
 
         // Initiallize all FPSComponent in children objects
         var components = GetComponentsInChildren<FPSComponent>();
