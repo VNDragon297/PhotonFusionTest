@@ -18,6 +18,12 @@ public class FPSAnimController : FPSComponent
         charController = GetComponent<CharacterController>();
 
         // State change events hooks goes here
+        controller.OnVelocityChanged += val =>
+        {
+            Debug.Log("Velocity changed");
+            if (!val) return;
+            SetTrigger("isWalking");
+        };
     }
 
     public override void FixedUpdateNetwork()

@@ -19,7 +19,12 @@ public class FPSController : FPSComponent
     [Networked] private Vector3 moveDirection { get; set; }
     [Networked] private Vector2 lookDelta { get; set; }
     [Networked] private bool fired { get; set; }
-    public Vector3 MoveDirection => moveDirection;
+
+    [Networked(OnChanged = nameof(OnVelocityChangedCallback))]
+    public bool isWalking { get; set; }
+    public event Action<bool> OnVelocityChanged;
+    private static void OnVelocityChangedCallback(Changed<FPSController> changed) =>
+        changed.Behaviour.OnVelocityChanged?.Invoke(changed.Behaviour.isWalking);
 
     private void Awake()
     {
@@ -75,30 +80,30 @@ public class FPSController : FPSComponent
             moveDirection = MoveAxisRemap(inputs.moveDirection);
             Vector3 move = transform.right * moveDirection.x + transform.forward * moveDirection.z;
             playerController.Move(move * walkSpeed * Runner.DeltaTime);
+
+            isWalking = (moveDirection.z >= 0.25f);
         }
         else
         {
             playerController.Move(Vector3.zero);        // Move function is responsible for character controller falling as well
+            isWalking = false;
         }
     }
 
     [Header("Camera Position")]
-    public Transform headRotation;
+    public Transform headTransform;
     float xRotation = 0f;
     private void Look(FPSInput.NetworkInputData inputs)
     {
-        if (Object.HasInputAuthority)
-        {
-            // Using runner.Deltatime might be bad unless you have client prediction
-            float mouseX = inputs.lookDelta.x * mouseSens * Runner.DeltaTime;
-            float mouseY = inputs.lookDelta.y * mouseSens * Runner.DeltaTime;
+        // Using runner.Deltatime might be bad unless you have client prediction
+        float mouseX = inputs.lookDelta.x * mouseSens * Runner.DeltaTime;
+        float mouseY = inputs.lookDelta.y * mouseSens * Runner.DeltaTime;
 
-            xRotation -= mouseY;
-            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-            // Currently broken on clients
-            transform.Rotate(mouseX * Vector3.up);
-            headRotation.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        }
+        // Currently broken on clients
+        transform.Rotate(mouseX * Vector3.up);
+        headTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
     }
 }

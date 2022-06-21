@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - EventManager
     - FPSAnimController
     - FPSCameraController
+    - FPSComponent
     - FPSController
     - FPSEntity
     - FPSInput
@@ -35,7 +36,6 @@ ScriptsOnlyBuild:
     - Fusion.NetworkRigidbody2D
     - Fusion.NetworkTransform
     Unity.InputSystem.dll:
-    - UnityEngine.InputSystem.Editor.PlayerInputEditor
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
     - UnityEngine.InputSystem.InputSettings
@@ -534,6 +534,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9642}
     - Class: 114
+      Script: {instanceID: 9802}
+    - Class: 114
       Script: {instanceID: 9820}
     - Class: 114
       Script: {instanceID: 10036}
@@ -646,7 +648,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 150f48639467da47f6f9164d22f3bdda
+      Hash: 90d6f123ca45006ad7f9942e8b5824b9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FPSController

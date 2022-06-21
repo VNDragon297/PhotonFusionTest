@@ -38,8 +38,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7769623463296345066}
   - {fileID: 7020385009488232813}
+  - {fileID: 7769623463296345066}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -110,7 +110,7 @@ MonoBehaviour:
   _interpolationDataSource: 0
   walkSpeed: 50
   mouseSens: 1
-  headRotation: {fileID: 7769623463296345066}
+  headTransform: {fileID: 7769623463296345066}
 --- !u!114 &4971529615853325619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,7 +301,7 @@ MonoBehaviour:
     _inverse: 999.99994
     _hash: -814817977
   StateHashes: 000000002b1a167c794069558b7cfd670f5f2b88
-  TriggerHashes: 00000000
+  TriggerHashes: 00000000d71687ce
 --- !u!114 &2260319654036529096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,7 +363,7 @@ Transform:
   m_Children:
   - {fileID: 3905430603998959232}
   m_Father: {fileID: 4971529615853325620}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6688963239965072417
 GameObject:
@@ -375,7 +375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7769623463296345066}
   m_Layer: 0
-  m_Name: HeadRotation
+  m_Name: CameraHeadPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -388,13 +388,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6688963239965072417}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4971529615853325620}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3582711412603056491
 PrefabInstance:
