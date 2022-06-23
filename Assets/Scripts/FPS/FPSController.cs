@@ -21,10 +21,16 @@ public class FPSController : FPSComponent
     [Networked] private bool fired { get; set; }
 
     [Networked(OnChanged = nameof(OnVelocityChangedCallback))]
-    public bool isWalking { get; set; }
-    public event Action<bool> OnVelocityChanged;
-    private static void OnVelocityChangedCallback(Changed<FPSController> changed) =>
-        changed.Behaviour.OnVelocityChanged?.Invoke(changed.Behaviour.isWalking);
+    private bool isWalking { get; set; }
+    public event Action<bool, string> OnVelocityChanged;
+    private static void OnVelocityChangedCallback(Changed<FPSController> changed)
+    {
+        var newVal = changed.Behaviour.isWalking;
+        changed.LoadOld();
+        var oldVal = changed.Behaviour.isWalking;
+        if(newVal != oldVal)
+            changed.Behaviour.OnVelocityChanged?.Invoke(newVal, "isWalking");
+    }
 
     private void Awake()
     {
@@ -81,12 +87,11 @@ public class FPSController : FPSComponent
             Vector3 move = transform.right * moveDirection.x + transform.forward * moveDirection.z;
             playerController.Move(move * walkSpeed * Runner.DeltaTime);
 
-            isWalking = (moveDirection.z >= 0.25f);
+            isWalking = (moveDirection.z >= .125f);
         }
         else
         {
             playerController.Move(Vector3.zero);        // Move function is responsible for character controller falling as well
-            isWalking = false;
         }
     }
 

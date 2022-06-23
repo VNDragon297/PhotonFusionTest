@@ -6,7 +6,6 @@ ScriptsOnlyBuild:
     - EventManager
     - FPSAnimController
     - FPSCameraController
-    - FPSComponent
     - FPSController
     - FPSEntity
     - FPSInput
@@ -28,7 +27,6 @@ ScriptsOnlyBuild:
     Fusion.Realtime.dll:
     - Fusion.Photon.Realtime.PhotonAppSettings
     Fusion.Runtime.dll:
-    - Fusion.NetworkMecanimAnimator
     - Fusion.NetworkObject
     - Fusion.NetworkPrefabSourceUnityStatic
     - Fusion.NetworkProjectConfigAsset
@@ -36,6 +34,7 @@ ScriptsOnlyBuild:
     - Fusion.NetworkRigidbody2D
     - Fusion.NetworkTransform
     Unity.InputSystem.dll:
+    - UnityEngine.InputSystem.Editor.PlayerInputEditor
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
     - UnityEngine.InputSystem.InputSettings
@@ -96,8 +95,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -127,7 +128,6 @@ ScriptsOnlyBuild:
     Fusion.Runtime:
     - Fusion.Accuracy
     - Fusion.AccuracyDefaults
-    - Fusion.AnimatorSyncSettings
     - Fusion.HeapConfiguration
     - Fusion.InterpolatedErrorCorrectionSettings
     - Fusion.InterpolationConfiguration
@@ -482,8 +482,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7792}
     - Class: 114
-      Script: {instanceID: 7964}
-    - Class: 114
       Script: {instanceID: 7966}
     - Class: 114
       Script: {instanceID: 7984}
@@ -533,8 +531,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9202}
     - Class: 114
       Script: {instanceID: 9642}
-    - Class: 114
-      Script: {instanceID: 9802}
     - Class: 114
       Script: {instanceID: 9820}
     - Class: 114
@@ -648,7 +644,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 90d6f123ca45006ad7f9942e8b5824b9
+      Hash: d6067c66bc22a3bc3a5e6b2933df340b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FPSController
@@ -1176,7 +1172,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerToggleHistory
   - hash:
       serializedVersion: 2
-      Hash: 8bbb7ea7d3dedc43595ea96f44b31153
+      Hash: 78446d67ee9eb399b60dc652cc7d99c2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FPSAnimController

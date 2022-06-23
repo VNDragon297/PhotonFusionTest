@@ -5,7 +5,6 @@ using Fusion;
 
 public class FPSAnimController : FPSComponent
 {
-    [SerializeField] private NetworkMecanimAnimator networkAnimator;
     [SerializeField] private Animator animator;
 
     private FPSController controller;
@@ -18,12 +17,7 @@ public class FPSAnimController : FPSComponent
         charController = GetComponent<CharacterController>();
 
         // State change events hooks goes here
-        controller.OnVelocityChanged += val =>
-        {
-            Debug.Log("Velocity changed");
-            if (!val) return;
-            SetTrigger("isWalking");
-        };
+        controller.OnVelocityChanged += SetBool;
     }
 
     public override void FixedUpdateNetwork()
@@ -31,12 +25,10 @@ public class FPSAnimController : FPSComponent
         base.FixedUpdateNetwork();
     }
 
-    // Network Mecanim Animator only seems to work with syncing triggers
-    public void SetTrigger(string name)
+    private void SetBool(bool val, string name) => animator.SetBool(name, val);
+
+    private void OnDestroy()
     {
-        if (Object.HasStateAuthority)
-            networkAnimator.SetTrigger(name);
-        else if (Object.HasInputAuthority)
-            animator.SetTrigger(name);
+        controller.OnVelocityChanged -= SetBool;
     }
 }

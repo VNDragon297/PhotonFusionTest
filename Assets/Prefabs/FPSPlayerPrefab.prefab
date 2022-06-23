@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 4971529615853325631}
   - component: {fileID: 5129404313363449214}
   - component: {fileID: 219190273751206175}
-  - component: {fileID: 4800139421704424522}
   - component: {fileID: 2260319654036529096}
   - component: {fileID: -8786040213150512873}
   m_Layer: 0
@@ -109,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
   walkSpeed: 50
-  mouseSens: 1
+  mouseSens: 5
   headTransform: {fileID: 7769623463296345066}
 --- !u!114 &4971529615853325619
 MonoBehaviour:
@@ -137,7 +136,6 @@ MonoBehaviour:
   - {fileID: 4971529615853325616}
   - {fileID: 5129404313363449214}
   - {fileID: 219190273751206175}
-  - {fileID: 4800139421704424522}
   - {fileID: 2260319654036529096}
   - {fileID: -8786040213150512873}
   SimulationBehaviours: []
@@ -273,35 +271,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
---- !u!114 &4800139421704424522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4971529615853325621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 506319458, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interpolationDataSource: 0
-  Animator: {fileID: 6976863785066810618}
-  SyncSettings: 79
-  FloatAccuracy:
-    _value: 0.001
-    _inverse: 999.99994
-    _hash: -814817977
-  TimeAccuracy:
-    _value: 0.0001
-    _inverse: 10000
-    _hash: 1061325578
-  WeightAccuracy:
-    _value: 0.001
-    _inverse: 999.99994
-    _hash: -814817977
-  StateHashes: 000000002b1a167c794069558b7cfd670f5f2b88
-  TriggerHashes: 00000000d71687ce
 --- !u!114 &2260319654036529096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,7 +284,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
-  networkAnimator: {fileID: 4800139421704424522}
   animator: {fileID: 6976863785066810618}
 --- !u!114 &-8786040213150512873
 MonoBehaviour:
