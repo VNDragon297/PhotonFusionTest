@@ -10,8 +10,6 @@ public class FPSInput : FPSComponent, INetworkRunnerCallbacks
 {
     public struct NetworkInputData : INetworkInput
     {
-        public const uint LMB = 1 << 0;
-
         public uint Buttons;
         public Vector2 moveDirection;
         public Vector2 lookDelta;
@@ -19,7 +17,8 @@ public class FPSInput : FPSComponent, INetworkRunnerCallbacks
         public bool IsUp(uint button) => IsDown(button) == false;
         public bool IsDown(uint button) => (Buttons & button) == button;
 
-        public bool fired => IsDown(LMB);
+        public bool isFirePresse;
+        public bool isJumpPressed;
     }
 
     public Gamepad gamepad;
@@ -27,6 +26,10 @@ public class FPSInput : FPSComponent, INetworkRunnerCallbacks
     [SerializeField] private InputAction Move;
     [SerializeField] private InputAction Look;
     [SerializeField] private InputAction Fire;
+    [SerializeField] private InputAction Jump;
+
+    private bool _firePressed;
+    private bool _jumpPressed;
 
     public override void Spawned()
     {
@@ -38,24 +41,27 @@ public class FPSInput : FPSComponent, INetworkRunnerCallbacks
         Move = Move.Clone();
         Look = Look.Clone();
         Fire = Fire.Clone();
+        Jump = Jump.Clone();
 
         Move.Enable();
         Look.Enable();
         Fire.Enable();
+        Jump.Enable();
 
         Fire.performed += FirePressed;
+        Jump.performed += JumpButtonAction;
+        Jump.canceled += JumpButtonAction;
     }
 
-    private void FirePressed(InputAction.CallbackContext ctx)
-    {
-
-    }
+    private void FirePressed(InputAction.CallbackContext ctx) => _firePressed = true;
+    private void JumpButtonAction(InputAction.CallbackContext ctx) => _jumpPressed = (ctx.performed) ? true : false;
 
     private void DisposeInput()
     {
         Move.Dispose();
         Look.Dispose();
         Fire.Dispose();
+        Jump.Dispose();
         // Does not need to unsubscribe from input events as
         // Dispose function will take care of that
     }
@@ -79,6 +85,7 @@ public class FPSInput : FPSComponent, INetworkRunnerCallbacks
         // Read inputs
         userInput.moveDirection = ReadVector2(Move);
         userInput.lookDelta = ReadVector2(Look);
+        userInput.isJumpPressed = _jumpPressed;
 
         // Send user's input to server
         input.Set(userInput);

@@ -256,7 +256,32 @@ MonoBehaviour:
     m_Id: 38aa2881-2397-4c00-af60-82d539b02ae8
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: b05ab698-f086-4ebb-91fc-b9c258a5d706
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Fire
+      m_Flags: 0
+    m_Flags: 0
+  Jump:
+    m_Name: Jump
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 1a475dc7-e0b6-4bf3-9ce5-5142eb7a4b03
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: d3c73106-79f6-4d20-b085-03437b245180
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Jump
+      m_Flags: 0
     m_Flags: 0
 --- !u!114 &219190273751206175
 MonoBehaviour:

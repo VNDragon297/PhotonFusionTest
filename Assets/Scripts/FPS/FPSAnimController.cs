@@ -17,18 +17,15 @@ public class FPSAnimController : FPSComponent
         charController = GetComponent<CharacterController>();
 
         // State change events hooks goes here
-        controller.OnVelocityChanged += SetBool;
-    }
-
-    public override void FixedUpdateNetwork()
-    {
-        base.FixedUpdateNetwork();
+        controller.OnBooleanChanged += SetBool;
     }
 
     private void SetBool(bool val, string name) => animator.SetBool(name, val);
+    private void SetFloat(float val, string name) => animator.SetFloat(name, val);
+    private void SetTrigger(string name) => animator.SetTrigger(name);
 
     private void OnDestroy()
     {
-        controller.OnVelocityChanged -= SetBool;
+        controller.OnBooleanChanged -= SetBool;
     }
 }

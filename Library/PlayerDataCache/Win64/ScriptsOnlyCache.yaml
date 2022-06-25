@@ -1178,7 +1178,7 @@ ScriptsOnlyBuild:
     className: FPSAnimController
   - hash:
       serializedVersion: 2
-      Hash: bf178479a8dad5b149b90a9a47be1acb
+      Hash: d2b839e2217823ad96e7ea60945b36aa
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FPSInput

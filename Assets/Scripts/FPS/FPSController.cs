@@ -22,14 +22,26 @@ public class FPSController : FPSComponent
 
     [Networked(OnChanged = nameof(OnVelocityChangedCallback))]
     private bool isWalking { get; set; }
-    public event Action<bool, string> OnVelocityChanged;
+    [Networked(OnChanged = nameof(OnPlayerAirbornCallback))]
+    private bool isGrounded { get; set; }
+    public event Action<bool, string> OnBooleanChanged;
+
+    private static void OnPlayerAirbornCallback(Changed<FPSController> changed)
+    {
+        var newVal = changed.Behaviour.isGrounded;
+        changed.LoadOld();
+        var oldVal = changed.Behaviour.isGrounded;
+        if (newVal != oldVal)
+            changed.Behaviour.OnBooleanChanged?.Invoke(!newVal, "isAirborn");
+    }
+
     private static void OnVelocityChangedCallback(Changed<FPSController> changed)
     {
         var newVal = changed.Behaviour.isWalking;
         changed.LoadOld();
         var oldVal = changed.Behaviour.isWalking;
         if(newVal != oldVal)
-            changed.Behaviour.OnVelocityChanged?.Invoke(newVal, "isWalking");
+            changed.Behaviour.OnBooleanChanged?.Invoke(newVal, "isWalking");
     }
 
     private void Awake()
@@ -67,6 +79,8 @@ public class FPSController : FPSComponent
 
         Look(Inputs);
         Move(Inputs);
+
+        isGrounded = playerController.IsGrounded;
     }
 
     public override void OnGameStart()
@@ -80,19 +94,16 @@ public class FPSController : FPSComponent
 
     private void Move(FPSInput.NetworkInputData inputs)
     {
-        if (playerController.IsGrounded)
-        {
-            // Player move in a 3D space, therefore must remap movement to 3D space
-            moveDirection = MoveAxisRemap(inputs.moveDirection);
-            Vector3 move = transform.right * moveDirection.x + transform.forward * moveDirection.z;
-            playerController.Move(move * walkSpeed * Runner.DeltaTime);
+        // Player move in a 3D space, therefore must remap movement to 3D space
+        moveDirection = MoveAxisRemap(inputs.moveDirection);
+        Vector3 move = transform.right * moveDirection.x + transform.forward * moveDirection.z;
+        playerController.Move(move * walkSpeed * Runner.DeltaTime);
 
+        if (playerController.IsGrounded)
             isWalking = (moveDirection.z >= .125f);
-        }
-        else
-        {
-            playerController.Move(Vector3.zero);        // Move function is responsible for character controller falling as well
-        }
+
+        if (inputs.isJumpPressed)
+            Jump();
     }
 
     [Header("Camera Position")]
@@ -110,5 +121,10 @@ public class FPSController : FPSComponent
         // Currently broken on clients
         transform.Rotate(mouseX * Vector3.up);
         headTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+    }
+
+    private void Jump()
+    {
+        playerController.Jump(false);
     }
 }
